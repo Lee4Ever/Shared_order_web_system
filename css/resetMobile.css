@@ -11,7 +11,7 @@ html {
   margin: 0px;
   padding: 0px;
   -webkit-text-size-adjust: 100%;
-  font-family: -apple-system, "PingFang SC", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  font-family: -apple-system, "PingFang SC", MicrosoftYaHeiLight, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-size: calc(50vw/7.5);
   background: transparent;

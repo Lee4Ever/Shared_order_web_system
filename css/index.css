@@ -35,3 +35,33 @@
 #indexList{
   padding: .76rem .38rem 0;
 }
+#indexList .index_list .index_list_item{
+  margin-bottom: .36rem
+}
+#indexList .index_list .index_list_item a{
+  display: flex;
+}
+#indexList .index_list .index_list_item a img{
+  display: inline-block;
+  width: 3.84rem;
+  height: 2.44rem;
+  object-fit:cover;
+  border-radius: .2rem;
+  border: 1px #d6d6d6 solid;
+  margin-right: .2rem;
+}
+#indexList .index_list .index_list_item a .list_content{
+  flex: 1;
+  height: 2.44rem;
+  color: #000;
+}
+#indexList .index_list .index_list_item a .list_content h3{
+  font-size:0.47rem;
+  font-family:MicrosoftYaHei;
+  line-height:1.1rem;
+}
+#indexList .index_list .index_list_item a .list_content p{
+  min-height:0.98rem;
+  font-size:0.37rem;
+  line-height:0.6rem;
+}
