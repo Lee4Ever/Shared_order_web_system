@@ -1,0 +1,37 @@
+@import "header.css";
+@import "footer.css";
+
+#app{
+  display: block;
+}
+
+#swiperBanner{
+  width: 15rem;
+  height: 7.6rem;
+  overflow: hidden;
+  position: relative;
+}
+#swiperBanner .swiper-slide{
+  position: relative;
+}
+#swiperBanner .swiper-slide .banner_tag{
+  display: block;
+  width: 1.44rem;
+  height: 1.44rem;
+  border-radius: .72rem;
+  position: absolute;
+  bottom: .22rem;
+  right: .66rem;
+  z-index: 999;
+  font-size:0.6rem;
+  color:#fff;
+  line-height:1.44rem;
+  text-align: center;
+}
+#swiperBanner .swiper-slide .rec_tag{
+  background: #32B7F0;
+}
+
+#indexList{
+  padding: .76rem .38rem 0;
+}

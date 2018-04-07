@@ -1,0 +1,33 @@
+#app_head_c{
+  width: 15rem;
+  height: 1.76rem;
+  background:rgba(252,252,252,1);
+  position: relative;
+}
+#app_head_c .head_back{
+  position: absolute;
+  display: block;
+  width:0.92rem;
+  height:0.92rem;
+  top: .42rem;
+  left: .38rem;
+  background: url(../img/icons.jpg) -0.52rem -1.78rem no-repeat;
+  background-size: 20.4rem;
+}
+#app_head_c .head_title{
+  text-align: center;
+  font-size:0.6rem;
+  font-family:MicrosoftYaHei;
+  color:rgba(217,217,217,1);
+  line-height:1.76rem;
+}
+#app_head_c .head_me{
+  position: absolute;
+  display: block;
+  width:0.86rem;
+  height:0.96rem;
+  top: .4rem;
+  right: .4rem;
+  background: url(../img/icons.jpg) -1.9rem -1.76rem no-repeat;
+  background-size: 20.4rem;
+}
