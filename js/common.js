@@ -9,3 +9,9 @@ var appHead = {
     //window.location='http://www.baidu.com'
   }
 }
+
+var smPage = {
+  useCoupon: function(){
+    alert('common.js:15')
+  }
+}

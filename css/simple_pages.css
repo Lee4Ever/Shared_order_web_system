@@ -1,0 +1,46 @@
+@import "header.css";
+@import "footer.css";
+
+#simple_page_container{
+  display: block;
+}
+
+.cash_c_d{
+  padding-top: 3rem;
+}
+.cash_c_d .shop_title{
+  font-size:1rem;
+  font-family:MicrosoftYaHei;
+  color:#8A8A8A;
+  line-height:1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.cash_c_d .detail_box{
+  width: 7rem;
+  margin: 0 auto;
+  font-size:0.67rem;
+  color:#777777;
+  line-height:1rem;
+  margin-bottom: .44rem;
+}
+.cash_c_d .share_notice{
+  text-align: center;
+  font-size:0.53rem;
+  line-height:.6rem;
+  margin-bottom: 4rem;
+}
+.cash_c_d .use_coupon{
+  display: block;
+  width:7.56rem;
+  height:1.24rem;
+  background:#41C416;
+  border-radius: 0.2rem;
+  font-size:0.67rem;
+  color:#fff;
+  line-height:1.24rem;
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: .1rem;
+  padding-left: .05rem;
+}

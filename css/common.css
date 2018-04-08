@@ -18,3 +18,12 @@
 
 /*swiper dot hack*/
 .swiper-pagination-bullet-active{background: #41c416 !important}
+
+#app{
+  display: block;
+  padding-bottom: 2rem;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}

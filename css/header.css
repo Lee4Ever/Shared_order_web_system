@@ -3,6 +3,7 @@
   height: 1.76rem;
   background:rgba(252,252,252,1);
   position: relative;
+  border-bottom: .04rem #d6d6d6 solid;
 }
 #app_head_c .head_back{
   position: absolute;
@@ -20,6 +21,12 @@
   font-family:MicrosoftYaHei;
   color:rgba(217,217,217,1);
   line-height:1.76rem;
+  letter-spacing: .16rem;
+  padding-left: .08rem;
+}
+#app_head_c .index_title{
+  letter-spacing: .8rem !important;
+  padding-left: .4rem !important;
 }
 #app_head_c .head_me{
   position: absolute;
