@@ -5,7 +5,8 @@
   width: 0.62rem;
   height: 0.64rem;
   margin-right: .5rem;
-  background: #000;
+  background: url(../img/icons.jpg) -10.16rem -1.92rem no-repeat;
+  background-size: 20.4rem;
 }
 
 .icon-mailBox {
@@ -13,7 +14,8 @@
   width: 0.62rem;
   height: 0.64rem;
   margin-right: .5rem;
-  background: #000;
+  background: url(../img/icons.jpg) -5.78rem -2rem no-repeat;
+  background-size: 20.4rem;
 }
 
 .icon-docs {
@@ -21,7 +23,8 @@
   width: 0.62rem;
   height: 0.64rem;
   margin-right: .5rem;
-  background: #000;
+  background: url(../img/icons.jpg) -4.5rem -1.92rem no-repeat;
+  background-size: 20.4rem;
 }
 
 .icon-people {
@@ -29,7 +32,8 @@
   width: 0.62rem;
   height: 0.64rem;
   margin-right: .5rem;
-  background: #000;
+  background: url(../img/icons.jpg) -6.92rem -1.98rem no-repeat;
+  background-size: 20.4rem;
 }
 
 .menu_arrow_r {
