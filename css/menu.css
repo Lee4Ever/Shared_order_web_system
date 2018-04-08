@@ -1,0 +1,65 @@
+/*icons*/
+
+.icon-settings {
+  display: block;
+  width: 0.62rem;
+  height: 0.64rem;
+  margin-right: .5rem;
+  background: #000;
+}
+
+.icon-mailBox {
+  display: block;
+  width: 0.62rem;
+  height: 0.64rem;
+  margin-right: .5rem;
+  background: #000;
+}
+
+.icon-docs {
+  display: block;
+  width: 0.62rem;
+  height: 0.64rem;
+  margin-right: .5rem;
+  background: #000;
+}
+
+.icon-people {
+  display: block;
+  width: 0.62rem;
+  height: 0.64rem;
+  margin-right: .5rem;
+  background: #000;
+}
+
+.menu_arrow_r {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: url(../img/icons.jpg) -0.42rem -1.08rem no-repeat;
+  background-size: 12.9rem;
+  transform: rotate(180deg);
+}
+
+#menu_list_container {
+  padding-bottom: 1rem;
+}
+
+#menu_list_container .menu_list li {
+  padding: 0 1.24rem;
+  border-bottom: 1px #E0E0E0 solid;
+  margin-bottom: .2rem
+}
+
+#menu_list_container .menu_list li a {
+  height: 1.78rem;
+  font-size: 0.67rem;
+  color: #676767;
+  line-height: 0.67rem;
+  font-weight: lighter;
+}
+
+#menu_list_container .menu_list li a .menu_title {
+  display: block;
+  flex: 1;
+}

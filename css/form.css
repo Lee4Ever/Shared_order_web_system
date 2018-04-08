@@ -147,3 +147,35 @@
   line-height: 0.8rem;
   margin-bottom: 2.9rem;
 }
+
+#form_pages .input_box .agreement {
+  height: 0.54rem;
+  font-size: 0.53rem;
+  font-family: MicrosoftYaHeiLight;
+  color: #676767;
+  line-height: 0.57rem;
+  margin-bottom: 1.1rem;
+}
+
+#form_pages .input_box .agreement input[type="checkbox"] {
+  content: "\a0";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .1rem;
+  border: 1px solid #C7C7C7;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: #fff;
+  border-radius: 0.2rem;
+  margin-top: -0.1rem
+}
+
+#form_pages .input_box .agreement input[type="checkbox"]:checked {
+  background-color: #C7C7C7;
+  background-clip: content-box;
+  padding: .08rem;
+}
+
+#form_pages button[disabled="disabled"] {
+  background: #676767;
+}

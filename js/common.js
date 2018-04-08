@@ -1,5 +1,5 @@
 //页面头部所有属性及方法
-var appHead = {
+let appHead = {
   //头部返回按钮
   goback() {
     console.log('appHead.goback()')
@@ -13,7 +13,7 @@ var appHead = {
 }
 
 //简单页面方法
-var smPage = {
+let smPage = {
   //使用现金券按钮方法
   useCoupon() {
     console.log('smPage.useCoupon()');
@@ -21,7 +21,7 @@ var smPage = {
 }
 
 //表单页面方法
-var formPage = {
+let formPage = {
   //验证码图片点击更换
   yzmChange() {
     console.log('formPage.yzmChange()');
@@ -57,5 +57,9 @@ var formPage = {
   //支付宝账户绑定按钮
   alipayBind() {
     console.log('formPage.alipayBind()')
+  },
+  //用户注册按钮
+  register() {
+    console.log('formPage.register()')
   }
 }

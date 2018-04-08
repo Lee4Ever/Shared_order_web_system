@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>注册页</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back" ontouchend="appHead.goback();"></i>
+      <h2 class="head_title">注册页</h2>
+      <i class="head_me" ontouchend="appHead.goMePage();"></i>
+    </header>
+    <section id="form_pages">
+      <div class="user_face_upload">
+        <input type="file">
+        <img src="img/userface.jpg" alt="" class="userface">
+        <p class="upload_notice">点击图片上传</p>
+      </div>
+      <div class="input_box small_ph_box">
+        <p class="input_bar flexBox f fb-v-center user_input">
+          <span>手&nbsp;机&nbsp;号&nbsp;码</span>
+          <input type="text">
+        </p>
+        <p class="input_bar flexBox f fb-v-center yzm_input">
+          <span>图片验证码</span>
+          <input type="text" placeholder="请输入验证码">
+          <img src="img/yzm.gif" class="yzm_img" ontouchend="formPage.yzmChange()">
+        </p>
+        <p class="input_bar flexBox f fb-v-center yzm_sms_input">
+          <span>短信验证码</span>
+          <input type="text" placeholder="请输入验证码">
+          <button type="button" class="sms_yzm_btn" ontouchend="formPage.getSmsYzm()">发送验证码</button>
+        </p>
+        <p class="input_bar flexBox f fb-v-center pwd_input" style="margin-bottom:1.08rem">
+          <span>密<i style="display:inline-block; width:2rem;"></i>码</span>
+          <input type="password">
+        </p>
+        <p class="agreement"><input type="checkbox" name="xieyi" id="agreement"><label for="agreement">同意《同意并支持此协议》</label></p>
+        <button name="find_pwd_btn" class="full_btn bg-b" ontouchend="formPage.register()">注&nbsp;&nbsp;册</button>
+        <p class="login_options clearFix">
+          <a href="login.html" class="to_right">已有账号.立即登录</a>
+        </p>
+      </div>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+</body>
+
+</html>
