@@ -1,1 +1,3 @@
-Outsourcing Beauty Shop Web
+Shared Order Web System
+
+An outsourcing project
