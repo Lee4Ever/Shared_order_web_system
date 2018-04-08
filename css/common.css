@@ -1,29 +1,102 @@
 /*解决iphone 苹果手机浏览器$(document).on("click",function(){})点击无效的问题*/
-.iphone_cursor{cursor:pointer}
+
+.iphone_cursor {
+  cursor: pointer
+}
 
 /*页面主题颜色*/
-.f-r{color:#f4635e}.f-y{color:#fbc203}.f-b{color:#32b7f0}.f-g{color:#41c416}
-.bg-r{background-color:#f4635e}.bg-y{background-color:#fbc203}.bg-b{background-color:#32b7f0}.bg-g{background-color:#41c416}
+
+.f-r {
+  color: #f4635e
+}
+
+.f-y {
+  color: #fbc203
+}
+
+.f-b {
+  color: #32b7f0
+}
+
+.f-g {
+  color: #41c416
+}
+
+.bg-r {
+  background-color: #f4635e
+}
+
+.bg-y {
+  background-color: #fbc203
+}
+
+.bg-b {
+  background-color: #32b7f0
+}
+
+.bg-g {
+  background-color: #41c416
+}
 
 /*css3盒子模型*/
-.flexBox{display: -webkit-flex; /* Safari */display: flex;}
-.fb-v-center{-webkit-align-items: center;align-items: center;}
-.fb-h-center{-webkit-justify-content:center;justify-content:center;}
+
+.flexBox {
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+}
+
+.fb-v-center {
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.fb-h-center {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
 
 /*多出文字省略号*/
-.textOverflow{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+.textOverflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 /*清除浮动*/
-.clearFix::after{content:"";display:block;height:0;clear:both;visibility:hidden;}
+
+.clearFix::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
 
 /*swiper dot hack*/
-.swiper-pagination-bullet-active{background: #41c416 !important}
 
-#app{
+.swiper-pagination-bullet-active {
+  background: #41c416 !important
+}
+
+#app {
   display: block;
   padding-bottom: 2rem;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+}
+
+.to_left {
+  float: left;
+}
+
+.to_right {
+  float: right;
+}
+
+input::-webkit-input-placeholder {
+  color: #D4D4D4;
 }

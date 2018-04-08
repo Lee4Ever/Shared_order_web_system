@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>绑定支付宝提现账号</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back" ontouchend="appHead.goback();"></i>
+      <h2 class="head_title">绑定支付宝提现账号</h2>
+      <i class="head_me" ontouchend="appHead.goMePage();"></i>
+    </header>
+    <section id="form_pages" class="alipay_binding">
+      <h1 class="ab_title">绑定支付宝提现账号</h1>
+      <div class="input_box small_ph_box">
+        <p class="input_bar flexBox f fb-v-center user_input">
+          <span>支付宝账号</span>
+          <input type="text" placeholder="请输入支付宝账号">
+        </p>
+        <p class="input_bar flexBox f fb-v-center user_input" style="margin-bottom: 3.94rem">
+          <span>支付宝姓名</span>
+          <input type="text" placeholder="请输入支付宝真实姓名">
+        </p>
+        <button name="login_btn" class="full_btn bg-g" ontouchend="formPage.alipayBind()">确认绑定</button>
+      </div>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+</body>
+
+</html>
