@@ -1,0 +1,109 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>我的好友</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/list.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back" ontouchend="appHead.goback();"></i>
+      <h2 class="head_title">我的好友</h2>
+      <i class="head_me" ontouchend="appHead.goMePage();"></i>
+    </header>
+    <section id="list_page_container">
+      <div class="tabs flexBox fb-h-center fb-v-center">
+        <div class="single_tab f-g">我的好友</div>
+        <div class="single_tab">新的好友</div>
+      </div>
+      <div class="list_container">
+        <div class="list_search flexBox fb-h-center">
+          <input type="text" id="search_bar" placeholder="请输入好友昵称...">
+          <button class="sch_btn" ontouchend="list.search()">搜索</button>
+        </div>
+        <div class="tab_container">
+          <div class="tab_page">
+            <ul class="simlpe_list">
+              <li class="flexBox fb-v-center">
+                <img src="img/userface.jpg" class="list_img">
+                <div class="list_content">
+                  <h3>丫丫小店</h3>
+                  <p class="removeable_box">
+                    <button class="f_del f-r">删除</button>
+                  </p>
+                </div>
+              </li>
+              <li class="flexBox fb-v-center">
+                <img src="img/userface.jpg" class="list_img">
+                <div class="list_content">
+                  <h3>丫丫小店</h3>
+                  <p class="removeable_box">
+                    <button class="f_del f-r">删除</button>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tab_page">
+            <ul class="simlpe_list">
+              <li class="flexBox fb-v-center">
+                <img src="img/userface.jpg" class="list_img">
+                <div class="list_content">
+                  <h3>丫丫小店</h3>
+                  <p class="removeable_box">
+                    <button class="f_accept f-g">同意</button>
+                    <button class="f_refuse f-r">拒绝</button>
+                  </p>
+                </div>
+              </li>
+              <li class="flexBox fb-v-center">
+                <img src="img/userface.jpg" class="list_img">
+                <div class="list_content">
+                  <h3>丫丫小店</h3>
+                  <p class="removeable_box">
+                    <button class="f_accept f-g">同意</button>
+                    <button class="f_refuse f-r">拒绝</button>
+                  </p>
+                </div>
+              </li>
+              <li class="flexBox fb-v-center">
+                <img src="img/userface.jpg" class="list_img">
+                <div class="list_content">
+                  <h3>丫丫小店</h3>
+                  <p class="removeable_box">
+                    <button class="f_accept f-g">同意</button>
+                    <button class="f_refuse f-r">拒绝</button>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.single_tab').on('touchend', function() {
+      list.switchTab($(this))
+    });
+
+    $('.removeable_box button').on('touchend', function() {
+      let a = $(this).attr('class').split(' ')[0]
+      list.fns(a);
+    })
+  </script>
+</body>
+
+</html>

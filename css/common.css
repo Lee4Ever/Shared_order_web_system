@@ -7,35 +7,35 @@
 /*页面主题颜色*/
 
 .f-r {
-  color: #f4635e
+  color: #f4635e !important;
 }
 
 .f-y {
-  color: #fbc203
+  color: #fbc203 !important;
 }
 
 .f-b {
-  color: #32b7f0
+  color: #32b7f0 !important;
 }
 
 .f-g {
-  color: #41c416
+  color: #41c416 !important;
 }
 
 .bg-r {
-  background-color: #f4635e
+  background-color: #f4635e !important;
 }
 
 .bg-y {
-  background-color: #fbc203
+  background-color: #fbc203 !important;
 }
 
 .bg-b {
-  background-color: #32b7f0
+  background-color: #32b7f0 !important;
 }
 
 .bg-g {
-  background-color: #41c416
+  background-color: #41c416 !important;
 }
 
 /*css3盒子模型*/
