@@ -12,9 +12,9 @@
 <body>
   <div id="app">
     <header id="app_head_c">
-      <i class="head_back" ontouchend="appHead.goback();"></i>
+      <i class="head_back"></i>
       <h2 class="head_title">注册页</h2>
-      <i class="head_me" ontouchend="appHead.goMePage();"></i>
+      <i class="head_me"></i>
     </header>
     <section id="form_pages">
       <div class="user_face_upload">
@@ -42,7 +42,7 @@
           <input type="password">
         </p>
         <p class="agreement"><input type="checkbox" name="xieyi" id="agreement"><label for="agreement">同意《同意并支持此协议》</label></p>
-        <button name="find_pwd_btn" class="full_btn bg-b" ontouchend="formPage.register()">注&nbsp;&nbsp;册</button>
+        <button name="find_pwd_btn" class="full_btn bg-b" id="reg_btn">注&nbsp;&nbsp;册</button>
         <p class="login_options clearFix">
           <a href="login.html" class="to_right">已有账号.立即登录</a>
         </p>
@@ -56,6 +56,17 @@
   </div>
   <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
   <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.yzm_img').click(function() {
+      formPage.yzmChange()
+    })
+    $('.sms_yzm_btn').click(function() {
+      formPage.getSmsYzm()
+    })
+    $('#reg_btn').click(function() {
+      formPage.register()
+    })
+  </script>
 </body>
 
 </html>

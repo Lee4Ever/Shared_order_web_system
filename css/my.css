@@ -1,0 +1,42 @@
+@import "header.css";
+@import "footer.css";
+#my_pages {
+  display: block;
+}
+
+.my_change {
+  padding: .84rem 1.2rem;
+  text-align: center;
+}
+
+.user_face {
+  width: 4.12rem;
+  height: 4.12rem;
+  margin: 0 auto 1.08rem;
+}
+
+.user_face .userface {
+  width: 4.12rem;
+  height: 4.12rem;
+  border-radius: 2.06rem;
+  object-fit: cover;
+}
+
+.my_change .change_container .change_value {
+  color: #6F6F6F;
+  font-size: 0.67rem;
+  line-height: 0.67rem;
+}
+
+.my_change .change_container .change_value::before {
+  content: "￥";
+  color: #6F6F6F;
+  font-size: 0.67rem;
+  line-height: 0.67rem;
+}
+
+.my_change .change_container .withdraw_way {
+  display: inline-block;
+  max-width: 12rem;
+  text-align: left;
+}

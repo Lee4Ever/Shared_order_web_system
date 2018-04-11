@@ -12,9 +12,9 @@
 <body>
   <div id="app">
     <header id="app_head_c">
-      <i class="head_back" ontouchend="appHead.goback();"></i>
+      <i class="head_back"></i>
       <h2 class="head_title">我的好友</h2>
-      <i class="head_me" ontouchend="appHead.goMePage();"></i>
+      <i class="head_me"></i>
     </header>
     <section id="list_page_container">
       <div class="tabs flexBox fb-h-center fb-v-center">
@@ -24,7 +24,7 @@
       <div class="list_container">
         <div class="list_search flexBox fb-h-center">
           <input type="text" id="search_bar" placeholder="请输入好友昵称...">
-          <button class="sch_btn" ontouchend="list.search()">搜索</button>
+          <button class="sch_btn">搜索</button>
         </div>
         <div class="tab_container">
           <div class="tab_page">
@@ -95,14 +95,18 @@
   <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
   <script src="js/common.js" charset="utf-8"></script>
   <script type="text/javascript">
-    $('.single_tab').on('touchend', function() {
+    $('.single_tab').click(function() {
       list.switchTab($(this))
     });
 
-    $('.removeable_box button').on('touchend', function() {
+    $('.removeable_box button').click(function() {
       let a = $(this).attr('class').split(' ')[0]
       list.fns(a);
     })
+
+    $('.sch_btn').click(function() {
+      list.search();
+    });
   </script>
 </body>
 

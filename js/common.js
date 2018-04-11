@@ -1,3 +1,11 @@
+$('.head_back').click(function() {
+  appHead.goback()
+})
+
+$('.head_me').click(function() {
+  appHead.goMePage()
+})
+
 //页面头部所有属性及方法
 const appHead = {
   //头部返回按钮
@@ -66,22 +74,22 @@ const formPage = {
 
 //列表页面方法
 const list = {
-  switchTab(_t){
+  switchTab(_t) {
     console.log('list.switchTab()');
-    let n = _t.index()+1;
-    $('.single_tab:nth-child('+n+')').addClass('f-g').siblings().removeClass('f-g');
-    $('.tab_page:nth-child('+n+')').show().siblings().hide();
+    let n = _t.index() + 1;
+    $('.single_tab:nth-child(' + n + ')').addClass('f-g').siblings().removeClass('f-g');
+    $('.tab_page:nth-child(' + n + ')').show().siblings().hide();
   },
-  search(){
+  search() {
     console.log('list.search()');
     v = $('#search_bar').val();
-    if(v==''){
+    if (v == '') {
       alert('请输入您要搜索的内容！')
     } else {
-      alert('搜索'+v)
+      alert('搜索' + v)
     }
   },
-  fns(cname){
+  fns(cname) {
     switch (cname) {
       case 'f_accept':
         console.log('新朋友接受');

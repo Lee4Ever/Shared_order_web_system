@@ -12,9 +12,9 @@
 <body>
   <div id="app">
     <header id="app_head_c">
-      <i class="head_back" ontouchend="appHead.goback();"></i>
+      <i class="head_back"></i>
       <h2 class="head_title">登录页</h2>
-      <i class="head_me" ontouchend="appHead.goMePage();"></i>
+      <i class="head_me"></i>
     </header>
     <section id="form_pages">
       <div class="user_face_upload">
@@ -34,9 +34,9 @@
         <p class="input_bar flexBox f fb-v-center yzm_input">
           <span>验证码</span>
           <input type="text" placeholder="请输入验证码">
-          <img src="img/yzm.gif" class="yzm_img" ontouchend="formPage.yzmChange()">
+          <img src="img/yzm.gif" class="yzm_img">
         </p>
-        <button name="login_btn" class="full_btn bg-g" ontouchend="formPage.login()">登&nbsp;&nbsp;录</button>
+        <button name="login_btn" class="full_btn bg-g" id="login_btn" ontouchend="formPage.login()">登&nbsp;&nbsp;录</button>
         <p class="login_options clearFix">
           <a href="#" class="to_left">手机快速注册</a>
           <a href="find_password.html" class="to_right">忘记密码</a>
@@ -51,6 +51,14 @@
   </div>
   <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
   <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.yzm_img').click(function() {
+      formPage.yzmChange()
+    })
+    $('#login_btn').click(function() {
+      formPage.login()
+    })
+  </script>
 </body>
 
 </html>

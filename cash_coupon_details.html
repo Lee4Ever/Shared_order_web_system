@@ -12,9 +12,9 @@
 <body>
   <div id="app">
     <header id="app_head_c">
-      <i class="head_back" ontouchend="appHead.goback();"></i>
+      <i class="head_back"></i>
       <h2 class="head_title">现金券详情</h2>
-      <i class="head_me" ontouchend="appHead.goMePage();"></i>
+      <i class="head_me"></i>
     </header>
     <section id="simple_page_container" class="cash_c_d">
       <h1 class="shop_title">丫丫丫的小店</h1>
@@ -25,7 +25,7 @@
         <p>现金券号码：<span id="cashCoupon">a021ffc4</span></p>
       </div>
       <p class="share_notice f-r">现金券号码可分享给朋友使用</p>
-      <button class="use_coupon" ontouchend="smPage.useCoupon();">前往店铺使用该券</button>
+      <button class="use_coupon">前往店铺使用该券</button>
     </section>
     <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
       <a href="#" class="nav_a active"><i class="btm_bg"></i>店铺</a>
@@ -35,6 +35,11 @@
   </div>
   <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
   <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.use_coupon').click(function() {
+      smPage.useCoupon()
+    })
+  </script>
 </body>
 
 </html>
