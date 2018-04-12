@@ -88,6 +88,11 @@
   line-height: 0.57rem;
 }
 
+.simlpe_list li .list_content h3 {
+  font-size: 0.53rem;
+  line-height: 0.57rem;
+}
+
 .removeable_box {
   position: absolute;
   right: -0.4rem;

@@ -26,6 +26,7 @@
   color: #6F6F6F;
   font-size: 0.67rem;
   line-height: 0.67rem;
+  margin-bottom: .24rem;
 }
 
 .my_change .change_container .change_value::before {
@@ -37,6 +38,83 @@
 
 .my_change .change_container .withdraw_way {
   display: inline-block;
-  max-width: 12rem;
+  width: 7.3rem;
   text-align: left;
+  font-size: 0.53rem;
+  color: #8A8A8A;
+  line-height: 0.57rem;
+}
+
+.my_change .change_container .withdraw_way>div {
+  padding: .76rem 0
+}
+
+.withdraw_way input[type="radio"] {
+  content: "\a0";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .15rem;
+  border: 1px solid #C7C7C7;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: #fff;
+  border-radius: 0.3rem;
+  margin-top: -0.1rem;
+}
+
+.withdraw_way input[type="radio"]:checked {
+  background-color: #45C11B;
+  background-clip: content-box;
+  padding: .16rem;
+}
+
+.withdraw_info {
+  min-width: 7.3rem;
+  display: inline-block;
+  text-align: left;
+  font-size: 0.53rem;
+  color: #8A8A8A;
+  line-height: 0.57rem;
+  margin-bottom: 1.26rem;
+}
+
+.withdraw_info p:first-child {
+  margin-bottom: .68rem;
+}
+
+.withdraw_info .clickable_span {
+  margin-left: .2rem;
+}
+
+.with_options {
+  display: inline-block;
+  width: 12.6rem;
+  text-align: left;
+}
+
+.with_options h4 {
+  font-size: 0.53rem;
+  color: #1C1C1C;
+  line-height: 0.57rem;
+  margin-top: .14rem;
+}
+
+.with_options .money_input_box {
+  border-bottom: 1px #E0E0E0 solid;
+  height: 2.8rem;
+  margin-bottom: .98rem;
+}
+
+.with_options .money_input_box>i {
+  display: block;
+  font-size: 1rem;
+  color: #1C1C1C;
+  margin-right: .5rem;
+}
+
+.with_options .money_input_box #w_money_value {
+  display: block;
+  width: 11rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }

@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>支付详情</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/simple_pages.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">支付详情</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="simple_page_container" class="cash_c_d payment_detail">
+      <div class="p_title_box">
+        <h3><i class="icon-house"></i>丫丫丫的小店</h3>
+        <p class="item_name">面部补水一次</p>
+      </div>
+      <div class="detail_box" style="width: 100%; max-width: none; margin-bottom: 1.82rem">
+        <p class="notice">项目金额：<b id="item_price">1000</b>元</p>
+        <p class="notice">支付金额：<b id="paied_price">500</b>元</p>
+        <p class="notice">支付优惠：<b id="p_preferential">500</b>元</p>
+        <p class="notice">支付状态：<b id="p_status" class="f-r">已支付</b></p>
+        <p class="notice">支付方式：<b id="p_way">微信</b></p>
+        <p class="notice">支付时间：<b id="p_date">2018-03-15</b></p>
+        <p class="notice">支付单号：<b id="p_number">2018031500422</b></p>
+        <div class="notice flexBox">
+          <p>使用现金券：</p>
+          <div id="p_used_coupon" style="flex:1; -webkit-flex: 1">
+            <p>满1000减300</p>
+            <p>满1000减300</p>
+          </div>
+        </div>
+      </div>
+      <button class="use_coupon pay_now">支付<b id="payment_price">500</b>元</button>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.copy_coupon').click(function() {
+      smPage.copyCoupon()
+    })
+  </script>
+</body>
+
+</html>

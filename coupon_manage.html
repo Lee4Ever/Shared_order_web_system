@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>现金券管理</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/simple_pages.css">
+</head>
+
+<body>
+  <div id="app">
+    <section id="simple_page_container" class="coupon_manage">
+      <ul class="coupon_list">
+        <li>
+          <div class="coupon_detail flexBox fb-v-center">
+            <div class="cou_detail_box">
+              <h3>&yen;<span id="coupon_value">700</span></h3>
+              <span class="use_condition">满<b id="condition">3000</b>可用</span>
+            </div>
+            <img class="coupon_cover" src="img/userface.jpg" alt="">
+          </div>
+          <p class="coupon_options clearFix">
+            <span class="option_l">有效期：<b id="coupon_deadline">30</b>天</span>
+            <i class="icon-trash to_right"></i>
+            <span class="clickable_span f-y to_right edit_coupon">编辑</span>
+          </p>
+        </li>
+      </ul>
+      <button id="add_coupon" class="smPage_btn" style="background-color: #107A79" onclick="smPage.addCoupon()">添加现金券</button>
+    </section>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.icon-trash').click(function() {
+      smPage.delCoupon($(this))
+    })
+
+    $('.edit_coupon').click(function() {
+      smPage.editCoupon($(this))
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>买单成功</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/simple_pages.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">买单成功</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="simple_page_container" class="cash_c_d">
+      <h1 class="shop_title">买单成功</h1>
+      <div class="detail_box" style="width: 11.32rem; margin-bottom: 1.82rem">
+        <p>恭喜您获得了价值<span id="cashCoupon">50</span>元现金券</p>
+        <p>现金券号码为：<span id="coupon_no">d52dqwr531sd85</span></p>
+        <p>现金券有效期：<span id="coupon_deadline">2017-12-25</span></p>
+        <p>请访问<span id="coupon_address">http://www.8888.com/kk1945</span>使用,该券为不记名现金券可发给朋友使用.</p>
+      </div>
+      <button class="use_coupon copy_coupon">复制优惠券信息</button>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.copy_coupon').click(function() {
+      smPage.copyCoupon()
+    })
+  </script>
+</body>
+
+</html>

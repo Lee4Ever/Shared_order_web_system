@@ -25,6 +25,24 @@ const smPage = {
   //使用现金券按钮方法
   useCoupon() {
     console.log('smPage.useCoupon()');
+  },
+  copyCoupon() {
+    console.log('smPage.copyCoupon()');
+  },
+  delCoupon(_t) {
+    console.log('smPage.delCoupon()');
+  },
+  editCoupon(_t) {
+    console.log('smPage.editCoupon()');
+  },
+  addCoupon() {
+    console.log('smPage.addCoupon()');
+  },
+  albumAdd() {
+    console.log('smPage.albumAdd()');
+  },
+  albumDel(_t) {
+    console.log('smPage.albumDel()');
   }
 }
 
@@ -115,5 +133,30 @@ const list = {
       default:
         console.log('button指令获取错误');
     }
+  }
+}
+
+//我的页面方法
+const my = {
+  withdraw(way) {
+    console.log('my.withdraw()');
+    if (way == 'wechat') {
+      //微信
+      console.log('微信提现');
+    } else if (way == 'alipay') {
+      //支付宝
+      console.log('支付宝提现');
+    } else {
+      console.log('提现方式获取错误');
+      return false;
+    }
+  },
+  accChange() {
+    console.log('my.accChange()');
+  },
+  withdrawAll() {
+    console.log('my.withdrawAll()');
+    m = $('#change_balance').text();
+    $('#w_money_value').val(m);
   }
 }

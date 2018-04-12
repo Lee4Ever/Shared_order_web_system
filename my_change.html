@@ -22,8 +22,27 @@
       </div>
       <div class="change_container">
         <p class="change_value">500.00</p>
-        <div class="withdraw_way">
-
+        <div class="withdraw_way clearFix">
+          <div class="to_left">
+            <input type="radio" name="withdraw" id="wd_wechat" checked="checked"><label for="wd_wechat">微信</label>
+          </div>
+          <div class="to_right">
+            <input type="radio" name="withdraw" id="wd_alipay"><label for="wd_alipay">支付宝</label>
+          </div>
+        </div>
+        <div class="withdraw_info">
+          <p>提现手续费率<b id="w_rates">0.95</b>%</p>
+          <p>提现账号：<b id="w_account">yuanmenglong</b> <span class="clickable_span" onclick="my.accChange()">更改</span></p>
+        </div>
+        <div class="with_options">
+          <h4>提现金额</h4>
+          <p class="money_input_box flexBox fb-v-center">
+            <i>&yen;</i>
+            <input type="number" id="w_money_value">
+          </p>
+          <p class="p_notice">当前零钱余额<b id="change_balance">500.00</b>元，<span class="clickable_span" onclick="my.withdrawAll()">全部提现</span></p>
+          <p class="p_notice" style="margin-bottom: .94rem">额外扣除手续费<b id="wd_fee">4.75元</b></p>
+          <button name="login_btn" class="full_btn bg-g" id="withdraw_btn">提&nbsp;&nbsp;现</button>
         </div>
       </div>
     </section>
@@ -35,6 +54,13 @@
   </div>
   <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
   <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    //获取当前提现方式
+    $('.withdraw_way input[type="radio"]').change(function() {
+      $id = $(this).attr('id').split('_')[1];
+      my.withdraw($id);
+    })
+  </script>
 </body>
 
 </html>

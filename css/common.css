@@ -38,6 +38,43 @@
   background-color: #41c416 !important;
 }
 
+/*icons*/
+
+.icon-shop {
+  padding: .1rem 0 .1rem .96rem;
+  background: url(../img/icon-shop.gif) left no-repeat;
+  background-size: .68rem;
+}
+
+.icon-delete {
+  position: absolute;
+  display: block;
+  width: .72rem;
+  height: .72rem;
+  right: .16rem;
+  top: .16rem;
+  background: url(../img/icon-delete.png) center no-repeat;
+  background-size: .72rem;
+}
+
+.icon-house {
+  display: block;
+  width: .62rem;
+  height: .6rem;
+  background: url(../img/icons.jpg) -9.14rem -1.94rem no-repeat;
+  background-size: 20.4rem;
+  float: left;
+  margin-right: .3rem;
+}
+
+.icon-trash {
+  display: block;
+  width: 0.38rem;
+  height: 0.52rem;
+  background: url(../img/icon-trash.png) center no-repeat;
+  background-size: .38rem;
+}
+
 /*css3盒子模型*/
 
 .flexBox {
@@ -103,4 +140,28 @@ input::-webkit-input-placeholder {
 
 .blk {
   display: block;
+}
+
+.clickable_span {
+  color: #32B7F0;
+}
+
+.p_notice {
+  text-align: left;
+  font-size: 0.53rem;
+  color: #8A8A8A;
+  line-height: 0.57rem;
+  margin-bottom: .46rem;
+}
+
+.full_btn {
+  width: 100%;
+  display: block;
+  text-align: center;
+  height: 1.6rem;
+  color: #fff;
+  border-radius: 0.2rem;
+  line-height: 1.6rem;
+  font-size: .67rem;
+  margin-bottom: .96rem;
 }

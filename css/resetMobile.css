@@ -51,6 +51,11 @@ img, a {
   -webkit-touch-callout: none;
 }
 
+i, b, strong {
+  font-weight: normal;
+  font-style: normal;
+}
+
 img {
   display: block;
   width: 100%;
