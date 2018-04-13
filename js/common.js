@@ -43,6 +43,15 @@ const smPage = {
   },
   albumDel(_t) {
     console.log('smPage.albumDel()');
+  },
+  payTips() {
+    console.log('smPage.payTips()')
+  },
+  itemRec() {
+    console.log('smPage.itemRec()')
+  },
+  getCoupon() {
+    console.log('smPage.getCoupon()');
   }
 }
 
@@ -133,6 +142,44 @@ const list = {
       default:
         console.log('button指令获取错误');
     }
+  },
+  orderDel(_t) {
+    console.log('list.orderDel()');
+  },
+  newQuicknote() {
+    console.log('list.newQuicknote()');
+    layer.open({
+      className: 'bg-g-title',
+      shadeClose: false,
+      title: [
+        '新增快捷回复',
+        'background-color: #FF4351; color:#fff;'
+      ],
+      content: '<textarea id="layer-input" placeholder="请输入快捷回复"></textarea>',
+      btn: ['添加', '取消'],
+      yes: function(index) {
+        console.log($('#layer-input').val())
+        alert('添加新快捷回复');
+        layer.close(index);
+      }
+    });
+  },
+  editQuicknote(_t) {
+    n = _t.parent().prev().text();
+    layer.open({
+      className: 'bg-g-title',
+      shadeClose: false,
+      title: [
+        '编辑快捷回复',
+        'background-color: #FF4351; color:#fff;'
+      ],
+      content: '<textarea id="layer-input">' + n + '</textarea>',
+      btn: ['添加', '取消'],
+      yes: function(index) {
+        alert('添加新快捷回复');
+        layer.close(index);
+      }
+    });
   }
 }
 

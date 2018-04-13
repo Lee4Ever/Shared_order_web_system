@@ -3,6 +3,7 @@
 #simple_page_container {
   display: block;
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .cash_c_d {
@@ -170,4 +171,111 @@
   font-size: .6rem;
   text-align: center;
   margin: 0 auto;
+  border-radius: 0.2rem;
+}
+
+.appointment_details {
+  text-align: left !important;
+}
+
+.a_d_cover {
+  width: 15rem;
+  height: 7.6rem;
+  object-fit: cover;
+  margin-bottom: 1.36rem;
+}
+
+.a_item_details {
+  padding: 0 .96rem;
+  color: #000;
+}
+
+.a_item_details>h2 {
+  font-size: 0.6rem;
+  line-height: 0.62rem;
+  margin-bottom: .96rem;
+  font-weight: bold;
+}
+
+.a_item_details .a_desc {
+  margin-bottom: 1.44rem;
+  font-size: 0.5rem;
+  line-height: 0.8rem;
+  font-weight: lighter;
+}
+
+.small_spacing_btn {
+  width: 5.14rem;
+  letter-spacing: .3rem;
+  padding-left: .3rem;
+}
+
+.item_name {
+  text-align: left !important;
+}
+
+.i_n_name {
+  letter-spacing: .05rem;
+}
+
+.order_pay_btn {
+  width: 8.6rem;
+  position: relative;
+  margin: 3.28rem auto .38rem;
+}
+
+.order_pay_btn a, .order_pay_btn .choose_middle {
+  display: block;
+  text-align: center;
+}
+
+.order_pay_btn a {
+  width: 4.2rem;
+  height: 1.4rem;
+  color: #fff;
+  font-size: 0.6rem;
+  line-height: 1.4rem;
+  letter-spacing: .3rem;
+  padding-left: .3rem;
+}
+
+.order_pay_btn #order_btn {
+  border-top-left-radius: .2rem;
+  border-bottom-left-radius: .2rem;
+}
+
+.order_pay_btn #pay_btn {
+  border-top-right-radius: .2rem;
+  border-bottom-right-radius: .2rem;
+}
+
+.choose_middle {
+  position: absolute;
+  width: 1.16rem;
+  height: 1.16rem;
+  background: #fff;
+  border-radius: .58rem;
+  font-size: 0.8rem;
+  line-height: 1.16rem;
+  color: #646464;
+  font-weight: lighter;
+  left: 50%;
+  margin-left: -.58rem;
+  top: .12rem;
+}
+
+.get_coupon {
+  padding-top: 3.66rem;
+}
+
+.get_coupon>h3 {
+  font-size: 0.67rem;
+  color: #8A8A8A;
+  line-height: 0.57rem;
+  margin-bottom: .92rem;
+}
+
+.get_coupon .g_coupon_cover {
+  width: 11.14rem;
+  margin: 0 auto 5.72rem;
 }

@@ -36,6 +36,51 @@
   background-size: 20.4rem;
 }
 
+.icon-album {
+  display: block;
+  width: 0.62rem;
+  height: 0.64rem;
+  margin-right: .5rem;
+  background: url(../img/icons.jpg) -1.9rem -3.62rem no-repeat;
+  background-size: 20.4rem;
+}
+
+.icon-db {
+  display: block;
+  width: 0.62rem;
+  height: 0.64rem;
+  margin-right: .5rem;
+  background: url(../img/icons.jpg) -3.18rem -3.6rem no-repeat;
+  background-size: 20.4rem;
+}
+
+.icon-file-add {
+  display: block;
+  width: 0.62rem;
+  height: 0.64rem;
+  margin-right: .5rem;
+  background: url(../img/icons.jpg) -5.88rem -3.52rem no-repeat;
+  background-size: 20.4rem;
+}
+
+.icon-printer {
+  display: block;
+  width: 0.62rem;
+  height: 0.64rem;
+  margin-right: .5rem;
+  background: url(../img/icons.jpg) -8.08rem -1.94rem no-repeat;
+  background-size: 20.4rem;
+}
+
+.icon-link {
+  display: block;
+  width: 0.62rem;
+  height: 0.64rem;
+  margin-right: .5rem;
+  background: url(../img/icons.jpg) -1.9rem -5.06rem no-repeat;
+  background-size: 20.4rem;
+}
+
 .menu_arrow_r {
   display: block;
   width: 0.6rem;
