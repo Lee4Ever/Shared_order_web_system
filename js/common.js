@@ -52,6 +52,9 @@ const smPage = {
   },
   getCoupon() {
     console.log('smPage.getCoupon()');
+  },
+  bindWechat() {
+    console.log('smPage.bindWechat()');
   }
 }
 
@@ -145,6 +148,25 @@ const list = {
   },
   orderDel(_t) {
     console.log('list.orderDel()');
+    layer.open({
+      content: '您确定要删除吗？',
+      btn: ['确定', '取消'],
+      yes: function(index) {
+        alert('删除');
+        layer.close(index);
+      }
+    });
+  },
+  payTipDel(_t) {
+    console.log('list.orderDel()');
+    layer.open({
+      content: '您确定要删除吗？',
+      btn: ['确定', '取消'],
+      yes: function(index) {
+        alert('删除');
+        layer.close(index);
+      }
+    });
   },
   newQuicknote() {
     console.log('list.newQuicknote()');
@@ -177,6 +199,52 @@ const list = {
       btn: ['添加', '取消'],
       yes: function(index) {
         alert('添加新快捷回复');
+        layer.close(index);
+      }
+    });
+  },
+  delQuicknote(_t) {
+    layer.open({
+      content: '您确定要删除吗？',
+      btn: ['确定', '取消'],
+      yes: function(index) {
+        alert('删除');
+        layer.close(index);
+      }
+    });
+  },
+  delCoupon(_t) {
+    layer.open({
+      content: '您确定要删除该现金券吗？',
+      btn: ['确定', '取消'],
+      yes: function(index) {
+        alert('删除');
+        layer.close(index);
+      }
+    });
+  },
+  delRec(_t) {
+    layer.open({
+      content: '您确定要删除吗？',
+      btn: ['确定', '取消'],
+      yes: function(index) {
+        alert('删除');
+        layer.close(index);
+      }
+    });
+  },
+  newItem() {
+    console.log('list.newItem()')
+  },
+  editItem() {
+    console.log('list.editItem()')
+  },
+  delItem(_t) {
+    layer.open({
+      content: '您确定要删除吗？',
+      btn: ['确定', '取消'],
+      yes: function(index) {
+        alert('删除');
         layer.close(index);
       }
     });

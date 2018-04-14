@@ -1,0 +1,79 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>我的现金券</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/list.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">我的现金券</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="list_page_container">
+      <div class="list_container">
+        <ul class="simlpe_list coupon_list">
+          <li class="flexBox">
+            <div class="c_cover">
+              <h4><span class="coupon_value">300</span></h4>
+              <p>满<b class="use_value">1000</b>元可用</p>
+            </div>
+            <div class="c_detail">
+              <h3>丫丫丫的小店</h3>
+              <p>有效期<b class="c_deadline">2018-03-28  11：00</b></p>
+            </div>
+            <i class="c-tags t-unused"></i>
+            <i class="icon-trash"></i>
+          </li>
+
+          <li class="flexBox">
+            <div class="c_cover">
+              <h4><span class="coupon_value">300</span></h4>
+              <p>满<b class="use_value">1000</b>元可用</p>
+            </div>
+            <div class="c_detail">
+              <h3>丫丫丫的小店</h3>
+              <p>有效期<b class="c_deadline">2018-03-28  11：00</b></p>
+            </div>
+            <i class="c-tags t-used"></i>
+            <i class="icon-trash"></i>
+          </li>
+
+          <li class="flexBox">
+            <div class="c_cover">
+              <h4><span class="coupon_value">300</span></h4>
+              <p>满<b class="use_value">1000</b>元可用</p>
+            </div>
+            <div class="c_detail">
+              <h3>丫丫丫的小店</h3>
+              <p>有效期<b class="c_deadline">2018-03-28  11：00</b></p>
+            </div>
+            <i class="c-tags t-expired"></i>
+            <i class="icon-trash"></i>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/layer.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.icon-trash').click(function() {
+      list.delCoupon($(this));
+    })
+  </script>
+</body>
+
+</html>

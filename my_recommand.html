@@ -1,0 +1,92 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>我的推荐</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/list.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">我的推荐</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="list_page_container">
+      <div class="list_container">
+        <ul class="simlpe_list my_rec">
+          <li>
+            <h3 class="r_unconfirmed f-r">等待确认</h3>
+            <div class="rec_details">
+              <p>推荐店家：<b class="rec_s_name">天通苑国泰</b></p>
+              <p>推荐用户：<b class="rec_u_name">丫丫丫</b></p>
+              <p>推荐报酬类型：<b class="rec_p_name">自定义报酬</b></p>
+              <div class="p_type flexBox">
+                <span>报酬金额：</span>
+                <ul>
+                  <li>700</li>
+                </ul>
+              </div>
+            </div>
+            <i class="icon-delete"></i>
+            <span class="removeable_box rec_time">2018-03-28  11：00</span>
+          </li>
+          <li>
+            <h3 class="r_confirmed f-b">已确认</h3>
+            <div class="rec_details">
+              <p>推荐店家：<b class="rec_s_name">天通苑国泰</b></p>
+              <p>推荐用户：<b class="rec_u_name">丫丫丫</b></p>
+              <p>推荐报酬类型：<b class="rec_p_name">自定义报酬</b></p>
+              <div class="p_type flexBox">
+                <span>报酬金额：</span>
+                <ul>
+                  <li>消费500报酬100元</li>
+                  <li>消费800报酬200元</li>
+                  <li>消费1000报酬300元</li>
+                  <li>消费1500报酬400元</li>
+                </ul>
+              </div>
+            </div>
+            <i class="icon-delete"></i>
+            <span class="removeable_box rec_time">2018-03-28  11：00</span>
+          </li>
+          <li>
+            <h3 class="r_refused f-y">已拒绝</h3>
+            <div class="rec_details">
+              <p>推荐店家：<b class="rec_s_name">天通苑国泰</b></p>
+              <p>推荐用户：<b class="rec_u_name">丫丫丫</b></p>
+              <p>推荐报酬类型：<b class="rec_p_name">自定义报酬</b></p>
+              <div class="p_type flexBox">
+                <span>报酬金额：</span>
+                <ul>
+                  <li>200</li>
+                </ul>
+              </div>
+            </div>
+            <i class="icon-delete"></i>
+            <span class="removeable_box rec_time">2018-03-28  11：00</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/layer.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.icon-delete').click(function() {
+      list.delRec($(this));
+    })
+  </script>
+</body>
+
+</html>
