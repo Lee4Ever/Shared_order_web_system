@@ -75,6 +75,17 @@
   background-size: .38rem;
 }
 
+.icon-remove {
+  width: .44rem;
+  height: .44rem;
+  display: block;
+  position: absolute;
+  top: .38rem;
+  right: .44rem;
+  background: url(../img/icon-remove.png) center no-repeat;
+  background-size: .44rem;
+}
+
 /*css3盒子模型*/
 
 .flexBox {

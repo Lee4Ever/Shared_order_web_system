@@ -167,3 +167,122 @@
 #form_pages button[disabled="disabled"] {
   background: #676767;
 }
+
+.customize_amount {
+  padding: .58rem 0 .6rem !important;
+}
+
+.input_value_box {
+  margin-bottom: .82rem;
+}
+
+#page_input, .cur_coupon, .input_layer {
+  display: block;
+  width: 8.94rem;
+  background: #fff;
+  border-radius: 0.2rem;
+  border: 1px #E1E1E1 solid;
+  padding: .38rem .32rem;
+  font-size: 0.37rem;
+  color: #AAAAAA;
+  line-height: 0.45rem;
+  margin: 0 auto;
+  margin-bottom: .41rem;
+}
+
+.s_keyboard {
+  width: 8.94rem;
+  padding: .59rem .48rem .5rem;
+  border: 1px #CDCDCD solid;
+  border-radius: 0.2rem;
+  margin: 0 auto;
+}
+
+.s_keyboard>.num_btn {
+  width: 2rem;
+  height: 1.4rem;
+  margin: 0 .94rem .66rem 0;
+  background: #F3F3F3;
+  text-align: center;
+  line-height: 1.4rem;
+  font-size: 0.8rem;
+  font-family: Cambria-Bold;
+  color: #969696;
+  border-radius: .1rem;
+  float: left;
+  font-weight: bold;
+}
+
+.s_keyboard>.num_btn:nth-child(3n) {
+  margin-right: 0
+}
+
+.num_btn:nth-child(10), .num_btn:nth-child(11), .num_btn:nth-child(12) {
+  margin-bottom: 0
+}
+
+.s_keyboard>.num_btn:last-child {
+  background: url(../img/icon-backspace.png) center no-repeat #EEAF48;
+  background-size: .54rem;
+}
+
+.use_coupon {
+  margin: .64rem auto .82rem;
+}
+
+.use_coupon>h4 {
+  text-align: center;
+  font-size: 0.53rem;
+  color: #9D9D9C;
+  margin-bottom: .68rem;
+}
+
+.use_coupon .cur_coupon {
+  color: #EEAF48 !important;
+  position: relative;
+}
+
+.cur_coupon .coupon_name {
+  display: block;
+  width: 7.3rem;
+}
+
+.no-coupon .coupon_name {
+  width: 100%;
+  text-align: center;
+}
+
+.container_layer {
+  width: 7rem;
+  margin: 0 auto;
+}
+
+.container_layer .input_layer {
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin-bottom: .8rem;
+}
+
+.coupon_layer {
+  width: 11.5rem !important;
+}
+
+.coupon_layer .layui-m-layercont {
+  padding: 1.5rem 0 .5rem;
+}
+
+.c_list_layer li {
+  margin-bottom: .4rem;
+  font-size: .37rem;
+  color: #d6d6d6;
+  line-height: .65rem;
+  background: url(../img/icon-unchecked.png) right no-repeat;
+  background-size: .6rem;
+  text-align: left;
+}
+
+.c_list_layer .coupon_checked {
+  background: url(../img/icon-checked.png) right no-repeat;
+  background-size: .6rem;
+}

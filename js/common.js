@@ -1,3 +1,6 @@
+let boxArr = [];  //小键盘数组
+let tipNum = 0; //默认小键盘输入值
+
 $('.head_back').click(function() {
   appHead.goback()
 })
@@ -99,6 +102,30 @@ const formPage = {
   //用户注册按钮
   register() {
     console.log('formPage.register()')
+  },
+  //页面小键盘输入
+  sKeyboard(v){
+    let p = $('#page_input');
+    let arrNum = '';
+
+    p.val('')
+
+    if (v != 'back') {
+      boxArr.push(v)
+    } else {
+      boxArr.pop();
+    }
+
+    if ($.inArray('.', boxArr) == -1 && boxArr[0] == '0' && boxArr.length > 1) {
+      boxArr.shift()
+    }
+
+    $.each(boxArr, function(i, n) {
+      arrNum += n;
+      p.val(arrNum);
+    })
+
+    tipNum = parseFloat(p.val())
   }
 }
 
@@ -248,6 +275,39 @@ const list = {
         layer.close(index);
       }
     });
+  },
+  iRecharge(_t){
+    console.log('list.iRecharge()');
+  },
+  iExpense(_t){
+    console.log('list.iExpense()');
+  },
+  iSearch() {
+    console.log('list.search()');
+    v = $('#search_bar').val();
+    if (v == '') {
+      alert('请输入您要搜索的内容！')
+    } else {
+      alert('搜索' + v)
+    }
+  },
+  cRecBtns(n,_t){
+    switch (n) {
+      case 'c_r_accept':
+        console.log(_t.text())
+        break;
+      case 'c_r_refuse':
+        console.log(_t.text())
+        break;
+      case 'c_r_contact':
+        console.log(_t.text())
+        break;
+      case 'c_r_delete':
+        console.log(_t.text())
+        break;
+      default:
+        console.error('btnType error')
+    }
   }
 }
 

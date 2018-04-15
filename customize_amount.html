@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>自定义金额买单</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">自定义金额买单</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="form_pages" class="customize_amount">
+      <div class="input_value_box">
+        <input id="page_input" placeholder="请输入打赏金额" readonly="readonly">
+        <div class="s_keyboard clearFix">
+          <button value="1" class="num_btn">1</button>
+          <button value="2" class="num_btn">2</button>
+          <button value="3" class="num_btn">3</button>
+          <button value="4" class="num_btn">4</button>
+          <button value="5" class="num_btn">5</button>
+          <button value="6" class="num_btn">6</button>
+          <button value="7" class="num_btn">7</button>
+          <button value="8" class="num_btn">8</button>
+          <button value="9" class="num_btn">9</button>
+          <button value="." class="num_btn">.</button>
+          <button value="0" class="num_btn">0</button>
+          <button value="back" class="num_btn"></button>
+        </div>
+      </div>
+      <div class="use_coupon">
+        <h4>使 用 现 金 券</h4>
+        <div class="cur_coupon">
+          <span class="coupon_name">满1000减300元</span>
+          <i class="icon-remove"></i>
+        </div>
+      </div>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/layer.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.num_btn').click(function() {
+      formPage.sKeyboard($(this).val())
+    })
+
+    $('.coupon_name').on('click', function() {
+      layer.open({
+        className: 'coupon_layer',
+        content: '<div class="container_layer"><input type="text" class="input_layer" placeholder="现金券号码" /><ul class="c_list_layer"><li>满50减10元</li><li>满100减30元</li><li class="coupon_checked">满1000减300元</li></ul></div>',
+        btn: ['确定', '取消'],
+        yes: function(index) {
+          $('.coupon_name').text($('.coupon_checked').text())
+          layer.close(index);
+        }
+      });
+    })
+
+    $('.icon-remove').click(function() {
+      $('.coupon_name').text('无');
+      $('.cur_coupon').addClass('no-coupon')
+      $(this).hide();
+    })
+
+    $('body').on('click', '.c_list_layer li', function() {
+      $(this).addClass('coupon_checked').siblings().removeClass('coupon_checked');
+    })
+  </script>
+</body>
+
+</html>

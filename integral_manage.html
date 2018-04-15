@@ -1,0 +1,93 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>积分管理</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/list.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">积分管理</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="list_page_container">
+      <div class="list_search flexBox fb-h-center" style="padding: 0 .56rem">
+        <input type="text" id="search_bar" placeholder="请输入昵称或手机号......">
+        <button class="sch_btn bg-b" style="background-image: none;padding-left: .2rem; color: #fff">搜索</button>
+      </div>
+      <div class="list_container no-padding-list">
+        <ul class="three_line_list integral_manage">
+          <li>
+            <div class="list_inner_c flexBox">
+              <img class="list-item-cover" src="img/userface.jpg" alt="">
+              <div class="list_inner_details">
+                <p class="i_m_name">丫丫丫</p>
+                <p class="i_m_tel">136****6300</p>
+                <p class="i_m_rest">3000</p>
+              </div>
+              <span class="list_inner_p clearFix">
+                <a href="javascript:;" class="two-color-btn tcb-l bg-g tcb-recharge">充 值</a>
+                <a href="javascript:;" class="two-color-btn tcb-r bg-y tcb-expense">消 费</a>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="list_inner_c flexBox">
+              <img class="list-item-cover" src="img/userface.jpg" alt="">
+              <div class="list_inner_details">
+                <p class="i_m_name">丫丫丫</p>
+                <p class="i_m_tel">136****6300</p>
+                <p class="i_m_rest">3000</p>
+              </div>
+              <span class="list_inner_p clearFix">
+                <a href="javascript:;" class="two-color-btn tcb-l bg-g tcb-recharge">充 值</a>
+                <a href="javascript:;" class="two-color-btn tcb-r bg-y tcb-expense">消 费</a>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="list_inner_c flexBox">
+              <img class="list-item-cover" src="img/userface.jpg" alt="">
+              <div class="list_inner_details">
+                <p class="i_m_name">丫丫丫</p>
+                <p class="i_m_tel">136****6300</p>
+                <p class="i_m_rest">3000</p>
+              </div>
+              <span class="list_inner_p clearFix">
+                <a href="javascript:;" class="two-color-btn tcb-l bg-g tcb-recharge">充 值</a>
+                <a href="javascript:;" class="two-color-btn tcb-r bg-y tcb-expense">消 费</a>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/layer.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.sch_btn').click(function() {
+      list.iSearch();
+    })
+    $('.tcb-recharge').click(function() {
+      list.iRecharge($(this));
+    });
+    $('.tcb-expense').click(function() {
+      list.iExpense($(this));
+    });
+  </script>
+</body>
+
+</html>

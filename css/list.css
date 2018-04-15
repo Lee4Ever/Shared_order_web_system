@@ -1,5 +1,25 @@
 @import "header.css";
 @import "footer.css";
+.two-color-btn {
+  display: block;
+  font-size: 0.4rem;
+  color: #fff;
+  line-height: 0.5rem;
+  padding: .16rem .3rem;
+}
+
+.tcb-l {
+  float: left;
+  border-top-left-radius: .2rem;
+  border-bottom-left-radius: .2rem;
+}
+
+.tcb-r {
+  float: right;
+  border-top-right-radius: .2rem;
+  border-bottom-right-radius: .2rem;
+}
+
 #list_page_container {
   background: #fff;
 }
@@ -111,7 +131,7 @@
   letter-spacing: .2rem;
 }
 
-.three_line_list li {
+.three_line_list>li {
   padding: 0 .56rem;
   border-bottom: 1px #D6D6D6 solid;
 }
@@ -489,4 +509,89 @@
 
 .q_n_list .flexBox .item_options .i_price::before {
   content: '￥'
+}
+
+.integral_manage li {
+  padding-top: .6rem;
+  padding-bottom: .6rem;
+}
+
+.integral_manage li .list_inner_c .list-item-cover {
+  width: 4.7rem;
+  height: 3.02rem;
+  margin-right: .66rem;
+}
+
+.integral_manage .list_inner_details p {
+  font-size: 0.47rem;
+  color: #676767;
+  line-height: 0.6rem;
+  margin-bottom: .62rem
+}
+
+.integral_manage .list_inner_details p:last-child {
+  margin-bottom: 0;
+}
+
+.integral_manage .list_inner_details .i_m_rest::before {
+  content: "剩余积分";
+}
+
+.integral_manage li .list_inner_c .list_inner_p {
+  width: auto;
+  padding-top: 2.2rem;
+}
+
+.c-rec .rec_content {
+  margin-bottom: .48rem;
+  text-align: left;
+}
+
+.c-rec .rec_content div {
+  font-size: 0.4rem;
+  color: #363636;
+  line-height: 0.57rem;
+  margin-bottom: .38rem;
+}
+
+.c-rec .rec_content .p_type {
+  margin-bottom: 0;
+}
+
+.c-rec .rec_content>span {
+  font-size: 0.33rem;
+  line-height: .4rem;
+}
+
+.c-rec>li {
+  text-align: center;
+  padding-top: .62rem;
+  padding-bottom: .58rem;
+}
+
+.c-rec .rec_content .p_type ul li {
+  margin-bottom: .38rem;
+}
+
+.two-btn-container {
+  display: inline-block;
+  border-radius: .2rem;
+  overflow: hidden;
+}
+
+.two-btn-container .two-color-btn {
+  padding: .3rem 0;
+  width: 3.5rem;
+}
+
+.two-btn-container .c_r_accept, .two-btn-container .c_r_contact {
+  background: #42D61E;
+}
+
+.two-btn-container .c_r_refuse {
+  background: #FFCA00;
+}
+
+.two-btn-container .c_r_delete {
+  background: #F46167;
 }
