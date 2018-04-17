@@ -1,0 +1,60 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>推荐项目</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">推荐项目</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="form_pages">
+      <div class="r_item_detail">
+        <h2 id="r_item_shop"><i class="icon-house"></i>丫丫丫的小店</h2>
+        <p id="r_item_name">面部补水一次</p>
+        <span id="r_item_price" class="f-r">900.00</span>
+      </div>
+      <div class="input_container">
+        <div class="two_line_input">
+          <span class="t_l_title">推荐用户</span>
+          <select id="r_user">
+            <option value="" selected disabled>请选择</option>
+            <option value="">张三</option>
+            <option value="">李四</option>
+          </select>
+        </div>
+        <div class="two_line_input">
+          <span class="t_l_title">报酬类型</span>
+          <select id="r_salary">
+            <option value="" selected>按档次报酬</option>
+            <option value="">按档次报酬</option>
+            <option value="">按档次报酬</option>
+          </select>
+        </div>
+        <div class="two_line_input">
+          <span class="t_l_title">报酬金额</span>
+          <input id="r_salary_value" type="text" placeholder="请输入报酬金额,单位(元)">
+        </div>
+      </div>
+      <button id="item_apply" class="small_btn bg-g" onclick="formPage.itemApply()">提交</button>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/layer.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+</body>
+
+</html>

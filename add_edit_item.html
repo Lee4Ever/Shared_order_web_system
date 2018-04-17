@@ -1,0 +1,159 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>添加编辑项目</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">添加编辑项目</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="form_pages">
+      <div class="cover_upload">
+        <input type="file">
+        <div class="file_cover"></div>
+        <p>点击上方图片上传项目图片</p>
+      </div>
+      <div class="input_container">
+        <div class="two_line_input">
+          <span class="t_l_title">项目名称</span>
+          <input type="text" placeholder="项目名称建议15字以内......">
+        </div>
+        <div class="two_line_input">
+          <span class="t_l_title">项目简介</span>
+          <textarea placeholder="项目内容建议30字以内......"></textarea>
+        </div>
+        <div class="two_line_input">
+          <span class="t_l_title">支付类型</span>
+          <select id="payType">
+            <option value="fixed" selected>固定金额</option>
+            <option value="optional">可选金额</option>
+            <option value="customize">自定义金额</option>
+          </select>
+        </div>
+        <!--内容分歧区域开始-->
+        <div class="change_container">
+          <div class="change_fixed">
+            <div class="two_line_input">
+              <span class="t_l_title">项目价格</span>
+              <input type="text" placeholder="请输入价格，单位（元）">
+            </div>
+            <div class="two_line_input">
+              <span class="t_l_title">可否点单（预约）</span>
+              <select class="fixed_appointment">
+                <option value="1" selected>可以</option>
+                <option value="0">不可以</option>
+              </select>
+            </div>
+            <div class="two_line_input">
+              <span class="t_l_title">点单金额</span>
+              <input type="text" placeholder="请输入点单金额，单位（元）">
+            </div>
+          </div>
+          <div class="change_optional">
+            <div class="select_amount" style="width: 100%; margin: 0 0 .62rem">
+              <h2 class="optional_title" style="font-size: .5rem">请点击下方输入框设置可选金额，单位（元）</h2>
+              <ul class="scratchable_latex clearFix">
+                <li>100</li>
+                <li>200</li>
+                <li>300</li>
+                <li>400</li>
+                <li class="a_selected">1000</li>
+                <li>500</li>
+                <li>600</li>
+                <li>700</li>
+                <li>800</li>
+              </ul>
+            </div>
+            <div class="two_line_input">
+              <span class="t_l_title">可否使用现金券</span>
+              <select>
+                <option value="" selected>可以</option>
+                <option value="">不可以</option>
+              </select>
+            </div>
+          </div>
+          <div class="change_customize">
+            <div class="two_line_input">
+              <span class="t_l_title">可否使用现金券</span>
+              <select>
+              <option value="1" selected>可以</option>
+              <option value="0">不可以</option>
+            </select>
+            </div>
+          </div>
+        </div>
+        <!--内容分歧区域结束-->
+        <div class="two_line_input">
+          <span class="t_l_title">可否发放现金券</span>
+          <select class="send_coupon_not">
+            <option value="1" selected>发放</option>
+            <option value="0">不发放</option>
+          </select>
+        </div>
+        <div class="coupon_add_box">
+          <h3 class="c_add" onclick="formPage.addSendCoupon()">添加发放现金券 +</h3>
+          <ul class="c_box">
+            <li class="flexBox fb-v-center">
+              <p>满200减20元</p>
+              <i class="icon-remove"></i>
+            </li>
+            <li class="flexBox fb-v-center">
+              <p>满200减20元</p>
+              <i class="icon-remove"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button id="item_apply" class="small_btn bg-g" onclick="formPage.itemApply()">提交</button>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/layer.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      formPage.ptChange()
+    })
+
+    $('#payType').change(function() {
+      formPage.ptChange()
+    })
+
+    $('.fixed_appointment').change(function() {
+      util.selectChange($('.fixed_appointment'), $('.fixed_appointment').parent().next())
+    })
+
+    $('.send_coupon_not').change(function() {
+      util.selectChange($('.send_coupon_not'), $('.send_coupon_not').parent().next())
+    })
+
+    $('#apply_changes').click(function() {
+      formPage.shopChange()
+    })
+
+    $('.scratchable_latex li').click(function() {
+      let v = $(this).text();
+      util.singleSwitch($(this), 'a_selected')
+    })
+
+    $('.c_box').on('click', '.icon-remove', function() {
+      $(this).parent().remove();
+    })
+  </script>
+</body>
+
+</html>

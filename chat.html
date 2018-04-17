@@ -1,0 +1,125 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>发消息</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/list.css">
+</head>
+
+<body>
+  <div id="app" class="fixed_head">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">发消息</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="list_page_container">
+      <div class="list_container no-padding-list" style="padding: 0">
+        <ul class="three_line_list c-rec">
+          <li>
+            <div class="chat_user flexBox fb-v-center">
+              <img class="chat_userface" src="img/userface.jpg">
+              <div class="chat_user_info">
+                <h3 class="msg_host">丫丫丫的小店</h3>
+                <span class="msg_time">2018-02-18  17:00:00</span>
+              </div>
+            </div>
+            <div class="msg_content">你是谁我是谁谁是谁的谁睡谁谁谁睡谁.......</div>
+          </li>
+          <li>
+            <div class="chat_user flexBox fb-v-center">
+              <img class="chat_userface" src="img/userface.jpg">
+              <div class="chat_user_info">
+                <h3 class="msg_host">丫丫丫的小店</h3>
+                <span class="msg_time">2018-02-18  17:00:00</span>
+              </div>
+            </div>
+            <div class="msg_content">你是谁我是谁谁是谁的谁睡谁谁谁睡谁.......</div>
+          </li>
+          <li>
+            <div class="chat_user flexBox fb-v-center">
+              <img class="chat_userface" src="img/userface.jpg">
+              <div class="chat_user_info">
+                <h3 class="msg_host">丫丫丫的小店</h3>
+                <span class="msg_time">2018-02-18  17:00:00</span>
+              </div>
+            </div>
+            <div class="msg_content">你是谁我是谁谁是谁的谁睡谁谁谁睡谁.......</div>
+          </li>
+          <li>
+            <div class="chat_user flexBox fb-v-center">
+              <img class="chat_userface" src="img/userface.jpg">
+              <div class="chat_user_info">
+                <h3 class="msg_host">丫丫丫的小店</h3>
+                <span class="msg_time">2018-02-18  17:00:00</span>
+              </div>
+            </div>
+            <div class="msg_content">你是谁我是谁谁是谁的谁睡谁谁谁睡谁.......</div>
+          </li>
+          <li>
+            <div class="chat_user flexBox fb-v-center">
+              <img class="chat_userface" src="img/userface.jpg">
+              <div class="chat_user_info">
+                <h3 class="msg_host">丫丫丫的小店</h3>
+                <span class="msg_time">2018-02-18  17:00:00</span>
+              </div>
+            </div>
+            <div class="msg_content">你是谁我是谁谁是谁的谁睡谁谁谁睡谁.......</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer id="chat_btm" class="flexBox fb-v-center">
+      <input id="chat_input" type="text" placeholder="输入文本">
+      <button id="chat_send_btn" onclick="sendMsg()">发送</button>
+      <button id="quick_note_reply" onclick="quickNote()"></button>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/layer.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var scrollHei = 300;
+
+    function sendMsg(m) {
+      let msg = m;
+      if (typeof(m) == 'undefined') {
+        msg = $('#chat_input').val();
+
+        if (msg == '') {
+          alert('消息不能为空');
+          return;
+        }
+      }
+
+      let html =
+        '<li><div class="chat_user flexBox fb-v-center"><img class="chat_userface" src="img/userface.jpg"><div class="chat_user_info"><h3 class="msg_host">丫丫丫的小店</h3><span class="msg_time">2018-02-18  17:00:00</span></div></div><div class="msg_content">' +
+        msg + '</div></li>'
+      $('.three_line_list').append(html);
+      $('body,html').animate({
+        scrollTop: scrollHei += 300
+      }, 500);
+
+      $('#chat_input').val('')
+    }
+
+    function quickNote() {
+      layer.open({
+        className: 'coupon_layer',
+        content: '<div class="container_layer"><ul class="q_n_list"><li>您好，我现在有事不在</li><li>哈哈哈</li><li>退款是不可能的</li></ul></div>',
+      });
+    }
+
+    $('body').on('click', '.q_n_list li', function() {
+      util.singleSwitch($(this), 'q_n_choose', function() {
+        sendMsg($('.q_n_choose').text())
+        layer.closeAll();
+      })
+    })
+  </script>
+</body>
+
+</html>

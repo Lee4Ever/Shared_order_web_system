@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>预约中心</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">预约中心</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="form_pages" class="appointment_center">
+      <div class="a_c_info">
+        <h1 id="a_c_title">面部护理30分钟</h1>
+        <p id="a_c_fee">预约费用：<b class="fee_value f-y">1000</b>元</p>
+        <textarea id="a_c_notice" placeholder="预约备注信息"></textarea>
+      </div>
+      <div class="pay_method">
+        <h3>支付方式</h3>
+        <ul class="p_m_list">
+          <li>
+            <h4 class="c_m_wechat">微信支付</h4>
+          </li>
+          <li>
+            <h4 class="c_m_alipay">支付宝</h4>
+          </li>
+        </ul>
+      </div>
+      <button id="pay_btn" class="small_btn bg-b">预约</button>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/layer.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    let payMethod = 0 //默认支付方式（0--微信,1--支付宝）
+
+    $(document).ready(function() {
+      util.singleSwitch($('.p_m_list li').eq(payMethod), 'p_m_checked', function() {
+        console.log('payMethod:' + payMethod);
+      });
+    })
+
+    $('#pay_btn').click(function() {
+      pay.pay();
+    })
+
+    $('.p_m_list li').click(function() {
+      pay.payMethod($(this))
+    })
+  </script>
+</body>
+
+</html>

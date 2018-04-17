@@ -1,4 +1,4 @@
-let boxArr = [];  //小键盘数组
+let boxArr = []; //小键盘数组
 let tipNum = 0; //默认小键盘输入值
 
 $('.head_back').click(function() {
@@ -104,20 +104,28 @@ const formPage = {
     console.log('formPage.register()')
   },
   //页面小键盘输入
-  sKeyboard(v){
+  sKeyboard(v) {
     let p = $('#page_input');
     let arrNum = '';
 
     p.val('')
 
-    if (v != 'back') {
-      boxArr.push(v)
-    } else {
+    if (v == 'back') {
       boxArr.pop();
+    } else {
+      if (v == '.' && $.inArray('.', boxArr) != -1) {
+
+      } else {
+        boxArr.push(v)
+      }
     }
 
     if ($.inArray('.', boxArr) == -1 && boxArr[0] == '0' && boxArr.length > 1) {
       boxArr.shift()
+    }
+
+    if (boxArr.indexOf('.') == 0 && boxArr.length > 1) {
+      boxArr.unshift('0');
     }
 
     $.each(boxArr, function(i, n) {
@@ -125,7 +133,58 @@ const formPage = {
       p.val(arrNum);
     })
 
-    tipNum = parseFloat(p.val())
+    tipNum = parseFloat(p.val()) //金额
+    console.log(tipNum)
+  },
+  couponRemove(_t) {
+    $('.coupon_name').text('无');
+    $('.cur_coupon').addClass('no-coupon')
+    _t.hide();
+    couponIndex = 0;
+  },
+  couponSelect(_t) {
+    _t.addClass('coupon_checked').siblings().removeClass('coupon_checked');
+    couponIndex = $('.coupon_checked').index() + 1;
+    $('.cur_coupon').removeClass('no-coupon');
+    $('.icon-remove').show();
+  },
+  shopSave(_t) {
+    console.log('保存')
+  },
+  shopApply() {
+    console.log('提交申请');
+  },
+  shopChange() {
+    console.log('确认添加/修改');
+  },
+  ptChange() {
+    let payType = $('#payType').val();
+    $('.change_' + payType + '').show().siblings().hide();
+  },
+  addSendCoupon() {
+    layer.open({
+      className: 'bg-g-title',
+      shadeClose: false,
+      title: [
+        '添加发放现金券',
+        'background-color: #41c416; color:#fff;'
+      ],
+      content: '满<input class="new_coupon" id="man_yuan" type="tel">减<input class="new_coupon" id="jian_yuan" type="tel">元',
+      btn: ['添加', '取消'],
+      yes: function(index) {
+        let man = parseInt($('#man_yuan').val());
+        let jian = parseInt($('#jian_yuan').val());
+        if (man >= jian) {
+          $('.c_box').append('<li class="flexBox fb-v-center"><p>满' + man + '减' + jian + '元</p><i class="icon-remove"></i></li>')
+          layer.close(index);
+        } else {
+          alert('满减金额不能小于优惠金额');
+        }
+      }
+    })
+  },
+  itemApply() {
+    console.log('提交')
   }
 }
 
@@ -276,11 +335,27 @@ const list = {
       }
     });
   },
-  iRecharge(_t){
-    console.log('list.iRecharge()');
+  iRecharge(_t) {
+    layer.open({
+      className: 'integral',
+      content: '<h3>请输入六位消费密码</h3><input type="tel" maxlength="6">',
+      btn: ['确定', '取消'],
+      yes: function(index) {
+        alert('确定');
+        layer.close(index);
+      }
+    });
   },
-  iExpense(_t){
-    console.log('list.iExpense()');
+  iExpense(_t) {
+    layer.open({
+      className: 'integral',
+      content: '<p class="use_shop">消费店铺：丫丫丫的小店</p><p class="use_shop">消费店铺：丫丫丫的小店</p><p class="i_remain">可用积分：<b class="remain_value">800</b></p><input type="text" class="use_value" placeholder="请输入消费积分......">',
+      btn: ['确定', '取消'],
+      yes: function(index) {
+        alert('确定');
+        layer.close(index);
+      }
+    });
   },
   iSearch() {
     console.log('list.search()');
@@ -291,7 +366,7 @@ const list = {
       alert('搜索' + v)
     }
   },
-  cRecBtns(n,_t){
+  cRecBtns(n, _t) {
     switch (n) {
       case 'c_r_accept':
         console.log(_t.text())
@@ -333,5 +408,52 @@ const my = {
     console.log('my.withdrawAll()');
     m = $('#change_balance').text();
     $('#w_money_value').val(m);
+  }
+}
+
+const pay = {
+  chooseCoupon() {
+    layer.open({
+      className: 'coupon_layer',
+      content: '<div class="container_layer"><input type="text" class="input_layer" placeholder="现金券号码" /><ul class="c_list_layer"><li>满50减10元</li><li>满100减30元</li><li>满1000减300元</li></ul></div>',
+      success: function(e) {
+        $('.c_list_layer li:nth-child(' + couponIndex + ')').addClass('coupon_checked').siblings().removeClass('coupon_checked');
+      },
+      btn: ['使用', '取消'],
+      yes: function(index) {
+        $('.coupon_name').text($('.coupon_checked').text())
+        layer.close(index);
+      }
+    });
+  },
+  payMethod(_t) {
+    util.singleSwitch(_t, 'p_m_checked', function() {
+      payMethod = $('.p_m_checked').index();
+      console.log('payMethod:' + payMethod);
+    })
+  },
+  pay() {
+    console.log('触发支付');
+  }
+}
+
+//封装常用函数
+const util = {
+  //单选切换class函数
+  singleSwitch(ele, cls, callback) {
+    ele.addClass(cls).siblings().removeClass(cls);
+    if (typeof(callback) != 'undefined') {
+      callback();
+    }
+  },
+  selectChange(e, t, callback) {
+    if (e.val() == '1') {
+      t.show();
+    } else {
+      t.hide();
+    }
+    if (typeof(callback) != 'undefined') {
+      callback();
+    }
   }
 }

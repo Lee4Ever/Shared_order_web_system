@@ -595,3 +595,106 @@
 .two-btn-container .c_r_delete {
   background: #F46167;
 }
+
+.chat_user {
+  color: #9A9A9A;
+  text-align: left;
+  margin-bottom: .3rem;
+}
+
+.chat_user .chat_userface {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 1.1rem;
+  object-fit: cover;
+  margin-right: .72rem;
+}
+
+.chat_user .chat_user_info {
+  display: block;
+  flex: 1;
+  -webkit-flex: 1;
+  font-size: 0.53rem;
+  font-family: MicrosoftYaHeiLight;
+  color: rgba(154, 154, 154, 1);
+  line-height: 0.57rem;
+}
+
+.chat_user .chat_user_info h3 {
+  padding: .3rem 0;
+  margin-bottom: .3rem;
+}
+
+.msg_content {
+  width: 100%;
+  text-align: left;
+  min-height: 2.46rem;
+  padding: .38rem;
+  background: #F9F9F9;
+  font-size: 0.53rem;
+  color: #7F7F7F;
+  line-height: 0.57rem;
+  border: 1px #E5E5E5 solid;
+}
+
+.coupon_layer .q_n_list {
+  width: 100%;
+}
+
+.coupon_layer .q_n_list li {
+  border: 1px #E5E5E5 solid;
+  margin-bottom: .3rem;
+  padding: .4rem;
+  font-size: 0.53rem;
+  color: #7F7F7F;
+  line-height: 0.57rem;
+}
+
+.coupon_layer .q_n_list .q_n_choose {
+  border-color: #41C515;
+  color: #41C515;
+}
+
+.integral {}
+
+.integral p {
+  width: 7rem;
+  font-size: .46rem;
+  color: #EEAF48;
+  line-height: .5rem;
+  margin: 0 auto .57rem;
+  text-align: left !important;
+}
+
+.integral .i_remain {
+  margin-bottom: 1.28rem;
+}
+
+.integral .use_value {
+  border: 1px #E1E1E1 solid;
+  border-radius: .2rem;
+  color: #AAAAAA;
+  font-size: .46rem;
+  padding: .4rem;
+  width: 7rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.integral h3 {
+  width: 7rem;
+  margin: 0 auto .6rem;
+  font-size: .46rem;
+  line-height: .6rem;
+  color: #AAAAAA;
+}
+
+.integral input[type="tel"] {
+  width: 7rem;
+  display: block;
+  margin: 0 auto;
+  border: 1px #E1E1E1 solid;
+  padding: .4rem;
+  text-align: center;
+}

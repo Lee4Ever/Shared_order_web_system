@@ -176,3 +176,15 @@ input::-webkit-input-placeholder {
   font-size: .67rem;
   margin-bottom: .96rem;
 }
+
+/*如果需要头部固定，在#app上添加.fixed_head即可*/
+
+.fixed_head {
+  padding-top: 1.75rem;
+}
+
+.fixed_head #app_head_c {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

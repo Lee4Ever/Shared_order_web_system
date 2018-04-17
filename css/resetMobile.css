@@ -37,7 +37,7 @@ input, select, textarea {
   appearance: none;
 }
 
-input:focus, textarea:focus, button:focus {
+input:focus, textarea:focus, button:focus, select:focus {
   outline: none;
 }
 

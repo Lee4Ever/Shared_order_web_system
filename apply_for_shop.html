@@ -1,0 +1,78 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>申请店铺</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">申请店铺</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="form_pages">
+      <h1 class="apply_title">申请成为店家</h1>
+      <div class="c_inputBox apply_style">
+        <ul class="c_i_list">
+          <li>
+            <span class="input_title">店铺名称</span>
+            <input class="input_t" type="text" placeholder="请输入店铺名称">
+          </li>
+          <li>
+            <span class="input_title">所属行业</span>
+            <select name="" class="c_select">
+              <option value="" disabled selected>选择所属行业</option>
+              <option value="">美容类</option>
+              <option value="">日用类</option>
+            </select>
+          </li>
+          <li class="shop_area">
+            <span class="input_title">所在地区</span>
+            <select name="" class="c_select">
+              <option value="" disabled selected>省份</option>
+              <option value="">北京</option>
+              <option value="">辽宁</option>
+            </select>
+            <select name="" class="c_select">
+              <option value="" disabled selected>城市</option>
+              <option value="">北京</option>
+              <option value="">辽宁</option>
+            </select>
+            <select name="" class="c_select">
+              <option value="" disabled selected>地区</option>
+              <option value="">北京</option>
+              <option value="">辽宁</option>
+            </select>
+          </li>
+          <li>
+            <span class="input_title">备注：</span>
+            <textarea class="input_ta" placeholder="请输入个性需求......"></textarea>
+          </li>
+        </ul>
+        <p class="notice">注意：以上信息申请后无法自行修改，如果需要修改请联系管理员！</p>
+        <p class="agreement"><input type="checkbox" name="xieyi" id="agreement"><label for="agreement">同意《同意并支持此协议》</label></p>
+      </div>
+      <button id="shop_apply" class="small_btn bg-g">提交申请</button>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('#shop_apply').click(function() {
+      formPage.shopApply()
+    })
+  </script>
+</body>
+
+</html>

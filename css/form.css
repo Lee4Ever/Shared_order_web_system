@@ -136,7 +136,7 @@
   margin-bottom: 2.9rem;
 }
 
-#form_pages .input_box .agreement {
+.agreement {
   height: 0.54rem;
   font-size: 0.53rem;
   font-family: MicrosoftYaHeiLight;
@@ -145,7 +145,7 @@
   margin-bottom: 1.1rem;
 }
 
-#form_pages .input_box .agreement input[type="checkbox"] {
+.agreement input[type="checkbox"] {
   content: "\a0";
   display: inline-block;
   vertical-align: middle;
@@ -158,7 +158,7 @@
   margin-top: -0.1rem
 }
 
-#form_pages .input_box .agreement input[type="checkbox"]:checked {
+.agreement input[type="checkbox"]:checked {
   background-color: #C7C7C7;
   background-clip: content-box;
   padding: .08rem;
@@ -170,6 +170,10 @@
 
 .customize_amount {
   padding: .58rem 0 .6rem !important;
+}
+
+.fixed_amount {
+  padding: 3.1rem 0 0 !important;
 }
 
 .input_value_box {
@@ -272,6 +276,21 @@
   padding: 1.5rem 0 .5rem;
 }
 
+.coupon_layer .layui-m-layerbtn {
+  background: #E9E9E9;
+  height: 1.46rem;
+  line-height: 1.46rem;
+  font-size: .54rem;
+}
+
+.coupon_layer .layui-m-layerbtn span[yes] {
+  color: #52D120;
+}
+
+.coupon_layer .layui-m-layerbtn span[no] {
+  color: #9D9D9C;
+}
+
 .c_list_layer li {
   margin-bottom: .4rem;
   font-size: .37rem;
@@ -285,4 +304,430 @@
 .c_list_layer .coupon_checked {
   background: url(../img/icon-checked.png) right no-repeat;
   background-size: .6rem;
+}
+
+.small_btn {
+  display: block;
+  width: 8.2rem;
+  padding: .42rem 0;
+  color: #fff;
+  font-size: .6rem;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 0.2rem;
+}
+
+.pay_method h3 {
+  font-size: 0.6rem;
+  color: #7C7272;
+  line-height: 0.65rem;
+  padding: .52rem 0 .52rem .82rem;
+  border-bottom: 1px #EAEAEA solid;
+}
+
+.p_m_list {
+  padding: 0 .4rem;
+  margin-bottom: .6rem;
+}
+
+.p_m_list li {
+  height: 1.9rem;
+  border-bottom: 1px #EAEAEA solid;
+  background: url(../img/icon-unchecked.png) right no-repeat;
+  background-size: .6rem;
+  font-size: 0.53rem;
+  color: #7C7272;
+  line-height: 1.9rem;
+  padding-left: .3rem;
+}
+
+.p_m_list .p_m_checked {
+  background: url(../img/icon-checked.png) right no-repeat;
+  background-size: .6rem;
+}
+
+.p_m_list li h4 {
+  padding-left: .96rem;
+}
+
+.p_m_list li .c_m_wechat {
+  background: url(../img/pay_wechat.gif) left no-repeat;
+  background-size: .7rem;
+}
+
+.p_m_list li .c_m_alipay {
+  background: url(../img/pay_alipay.gif) left no-repeat;
+  background-size: .7rem;
+}
+
+#fixed_title {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #7E7E7E;
+  line-height: 0.85rem;
+  margin-bottom: .82rem;
+  letter-spacing: .3rem;
+  padding-left: .3rem;
+}
+
+#amount {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #EEAF48;
+  line-height: 0.57rem;
+  letter-spacing: .15rem;
+  padding-left: .15rem;
+}
+
+#amount::after {
+  content: '元';
+}
+
+.fixed_amount .coupon_name, .black_coupon .coupon_name {
+  color: #626262;
+}
+
+.select_amount {
+  width: 11.3rem;
+  margin: 0 auto .74rem;
+}
+
+.select_amount .optional_title {
+  height: 2.4rem;
+  padding-left: .64rem;
+  font-size: 0.67rem;
+  color: #AAAAAA;
+  line-height: 2.4rem;
+  border: 1px #E1E1E1 solid;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+
+.select_amount .scratchable_latex li {
+  width: 33%;
+  height: 2.04rem;
+  float: left;
+  border: .01rem #E1E1E1 solid;
+  text-align: center;
+  font-size: 0.65rem;
+  color: #2D2D2D;
+  line-height: 2.04rem;
+  font-weight: bold;
+}
+
+.select_amount .scratchable_latex li::after {
+  content: '元';
+}
+
+.select_amount .scratchable_latex li:nth-child(3n-1) {
+  width: 34%;
+}
+
+.select_amount .scratchable_latex .a_selected {
+  border-color: #44C11D !important;
+  z-index: 1;
+  color: #44C11D;
+}
+
+.appointment_center {
+  padding-top: 2.78rem !important;
+}
+
+.appointment_center .a_c_info {
+  width: 11.6rem;
+  margin: 0 auto .82rem;
+}
+
+.appointment_center #a_c_title {
+  font-size: 0.73rem;
+  margin-bottom: .8rem;
+  color: #3D3D3D;
+  line-height: 0.8rem;
+}
+
+.appointment_center #a_c_fee {
+  margin-bottom: 1.02rem;
+  font-size: 0.6rem;
+  color: #3D3D3D;
+  line-height: 0.65rem;
+}
+
+.appointment_center #a_c_notice {
+  width: 11.6rem;
+  height: 4.9rem;
+  border: 1px #E1E1E1 solid;
+  border-radius: .2rem;
+  padding: .38rem .42rem;
+  font-size: 0.47rem;
+  color: #222222;
+  line-height: .6rem;
+  resize: none;
+}
+
+.c_inputBox {
+  padding: 0 .4rem;
+  margin-bottom: 5rem;
+}
+
+.c_inputBox .c_i_list {
+  border-top: 1px #D6D6D6 solid;
+}
+
+.c_inputBox .c_i_list li {
+  border-bottom: 1px #D6D6D6 solid;
+  font-size: 0.47rem;
+  color: #676767;
+  line-height: 0.6rem;
+  padding: .4rem 0 .4rem .58rem;
+}
+
+.c_inputBox .c_i_list li .input_title {
+  display: inline-block;
+  width: 2.4rem;
+}
+
+.c_inputBox .c_i_list li .input_t, .c_inputBox .c_i_list li .c_select {
+  display: inline-block;
+  width: 8rem;
+}
+
+.c_inputBox .c_i_list li .c_select {
+  font-size: 0.47rem;
+  color: #676767;
+  line-height: 0.6rem;
+}
+
+.c_inputBox .c_i_list li input[type="radio"] {
+  content: "\a0";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .15rem;
+  border: 1px solid #C7C7C7;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: #fff;
+  border-radius: 0.3rem;
+  margin-top: -0.1rem;
+}
+
+.c_inputBox .c_i_list li input[type="radio"]:checked {
+  background-color: #45C11B;
+  background-clip: content-box;
+  padding: .16rem;
+}
+
+.apply_title {
+  font-size: 1rem;
+  color: #6F6F6F;
+  line-height: 1.1rem;
+  text-align: center;
+  margin-bottom: 1.7rem;
+  padding-top: .3rem;
+}
+
+.apply_style {
+  margin-bottom: 0 !important
+}
+
+.apply_style .c_i_list {
+  border: none;
+  padding: 0 1.18rem;
+}
+
+.apply_style .c_i_list li {
+  padding: .56rem 0;
+  font-size: 0.67rem;
+  color: #676767;
+  line-height: 0.57rem;
+  margin-bottom: .3rem;
+}
+
+.apply_style .c_i_list li .input_title {
+  width: 3rem;
+}
+
+.apply_style .c_i_list li .input_t, .apply_style .c_i_list li .c_select {
+  font-size: .6rem;
+}
+
+.apply_style .c_i_list .shop_area .c_select {
+  width: 2.3rem;
+}
+
+.apply_style .c_i_list li .input_ta {
+  display: block;
+  width: 100%;
+  height: 3.54rem;
+  border: 1px #E9E9E9 solid;
+  padding: .26rem .34rem;
+  font-size: 0.4rem;
+  resize: none;
+  margin: .6rem 0 .86rem;
+}
+
+.apply_style .c_i_list li:last-child {
+  border: none;
+}
+
+.notice {
+  font-size: 0.4rem;
+  margin-bottom: 1.26rem;
+  color: #EEAF48;
+  line-height: 0.8rem;
+  padding: 0 1.18rem;
+}
+
+.apply_style .agreement {
+  text-align: center;
+}
+
+.apply_style .agreement input[type="checkbox"]:checked {
+  background-color: #C7C7C7;
+  background-clip: content-box;
+  padding: .08rem;
+}
+
+.cover_upload {
+  width: 14.2rem;
+  margin: 0 auto .42rem;
+  position: relative;
+}
+
+.cover_upload input[type='file'] {
+  display: block;
+  width: 14.2rem;
+  height: 6rem;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cover_upload .file_cover {
+  width: 14.2rem;
+  height: 6rem;
+  border: 1px #CDCDCD solid;
+  border-radius: .2rem;
+  background: url(../img/icon-add.png) center no-repeat;
+  background-size: 3.18rem;
+  margin-bottom: .34rem;
+}
+
+.cover_upload p {
+  text-align: center;
+  font-size: 0.33rem;
+  color: #D0D0D0;
+  line-height: 0.57rem;
+}
+
+.input_container {
+  padding: 0 1rem 1rem;
+}
+
+.input_container .two_line_input {
+  margin-bottom: .62rem;
+  font-size: 0.4rem;
+  color: #717171;
+  line-height: 0.8rem;
+}
+
+.input_container .two_line_input .t_l_title {
+  margin-bottom: .22rem;
+}
+
+.two_line_input input[type="text"], .two_line_input textarea, .two_line_input select {
+  padding: .3rem .18rem;
+  width: 100%;
+  font-size: 0.4rem;
+  line-height: 0.8rem;
+  border: 1px #CDCDCD solid;
+  border-radius: .2rem;
+}
+
+.input_container .two_line_input textarea {
+  height: 3.2rem;
+  resize: none;
+}
+
+.input_container .two_line_input textarea::-webkit-input-placeholder {
+  color: #C9C9C9;
+}
+
+.input_container .two_line_input select {
+  background: url(../img/icon-arrow-down.gif) 12.2rem no-repeat;
+  background-size: .36rem;
+}
+
+.input_container .coupon_add_box {
+  width: 100%;
+  border: 1px #CDCDCD solid;
+  border-radius: .2rem;
+}
+
+.input_container .coupon_add_box .c_add {
+  padding: .28rem .36rem;
+  border-bottom: 1px #CDCDCD solid;
+  font-size: 0.4rem;
+  color: #32B7F0;
+  line-height: 0.8rem;
+}
+
+.input_container .coupon_add_box .c_box {
+  padding: .2rem .32rem 0;
+}
+
+.input_container .coupon_add_box .c_box li {
+  padding: .3rem .18rem;
+  width: 100%;
+  font-size: 0.4rem;
+  line-height: 0.8rem;
+  border: 1px #CDCDCD solid;
+  border-radius: .2rem;
+  color: #626262;
+  margin-bottom: .2rem;
+}
+
+.input_container .coupon_add_box .c_box li p {
+  flex: 1;
+  -webkit-flex: 1;
+}
+
+.input_container .coupon_add_box .c_box li .icon-remove {
+  position: static;
+  margin-right: .21rem;
+}
+
+.new_coupon {
+  width: 2rem;
+  border: 1px #E1E1E1 solid;
+  margin: 0 .5rem;
+  padding: .5rem;
+}
+
+.change_fixed, .change_optional, .change_customize {
+  display: none;
+}
+
+.r_item_detail {
+  color: #8A8A8A;
+  padding: 2rem 1rem 1rem;
+  font-size: 0.47rem;
+  line-height: 0.57rem;
+}
+
+.r_item_detail h2 {
+  font-size: 0.6rem;
+  line-height: 0.57rem;
+  margin-bottom: .5rem;
+}
+
+.r_item_detail p {
+  font-size: 0.47rem;
+  line-height: 0.57rem;
+  margin-bottom: .46rem
+}
+
+.r_item_detail span::before {
+  content: "￥"
 }

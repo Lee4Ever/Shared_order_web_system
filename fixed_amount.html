@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta content="telephone=no" name="format-detection" />
-  <title>自定义金额买单</title>
+  <title>固定金额买单</title>
   <link rel="stylesheet" href="css/resetMobile.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/form.css">
@@ -13,27 +13,12 @@
   <div id="app">
     <header id="app_head_c">
       <i class="head_back"></i>
-      <h2 class="head_title">自定义金额买单</h2>
+      <h2 class="head_title">固定金额买单</h2>
       <i class="head_me"></i>
     </header>
-    <section id="form_pages" class="customize_amount">
-      <div class="input_value_box">
-        <input id="page_input" placeholder="请输入打赏金额" readonly="readonly">
-        <div class="s_keyboard clearFix">
-          <button value="1" class="num_btn">1</button>
-          <button value="2" class="num_btn">2</button>
-          <button value="3" class="num_btn">3</button>
-          <button value="4" class="num_btn">4</button>
-          <button value="5" class="num_btn">5</button>
-          <button value="6" class="num_btn">6</button>
-          <button value="7" class="num_btn">7</button>
-          <button value="8" class="num_btn">8</button>
-          <button value="9" class="num_btn">9</button>
-          <button value="." class="num_btn">.</button>
-          <button value="0" class="num_btn">0</button>
-          <button value="back" class="num_btn"></button>
-        </div>
-      </div>
+    <section id="form_pages" class="fixed_amount">
+      <h1 id="fixed_title">买单金额</h1>
+      <p id="amount">200</p>
       <div class="use_coupon">
         <h4>使 用 现 金 券</h4>
         <div class="cur_coupon">
@@ -52,7 +37,7 @@
           </li>
         </ul>
       </div>
-      <button id="pay_btn" class="small_btn bg-g">支付<b>700</b>元</button>
+      <button id="pay_btn" class="small_btn bg-g">支付<b>200</b>元</button>
     </section>
     <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
       <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
@@ -71,10 +56,6 @@
       util.singleSwitch($('.p_m_list li').eq(payMethod), 'p_m_checked', function() {
         console.log('payMethod:' + payMethod);
       });
-    })
-
-    $('.num_btn').click(function() {
-      formPage.sKeyboard($(this).val())
     })
 
     $('.coupon_name').on('click', function() {

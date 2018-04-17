@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>店铺设置</title>
+  <link rel="stylesheet" href="css/resetMobile.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+  <div id="app">
+    <header id="app_head_c">
+      <i class="head_back"></i>
+      <h2 class="head_title">店铺设置</h2>
+      <i class="head_me"></i>
+    </header>
+    <section id="form_pages">
+      <div class="user_face_upload">
+        <input type="file">
+        <img src="img/userface.jpg" alt="" class="userface">
+        <p class="upload_notice">点击图片上传</p>
+      </div>
+      <div class="c_inputBox">
+        <ul class="c_i_list">
+          <li>
+            <span class="input_title">店铺名称</span>
+            <input class="input_t" type="text" placeholder="请输入店铺名称">
+          </li>
+          <li>
+            <span class="input_title">所属行业</span>
+            <select name="" class="c_select">
+              <option value="" selected>百货类</option>
+              <option value="">美容类</option>
+              <option value="">日用类</option>
+            </select>
+          </li>
+          <li>
+            <span class="input_title">是否营业</span>
+            <input class="input_r" type="radio" name="opened" id="c_open" checked><label for="c_open">是</label>
+            <input class="input_r" type="radio" name="opened" id="c_close"><label for="c_close">否</label>
+          </li>
+        </ul>
+      </div>
+      <button id="shop_save" class="small_btn bg-g">保存</button>
+    </section>
+    <footer id="app_menu_btm" class="flexBox fb-v-center fb-h-center">
+      <a href="#" class="nav_a"><i class="btm_bg"></i>店铺</a>
+      <a href="#" class="nav_a"><i class="btm_bg"></i>好友</a>
+      <a href="#" class="nav_a active"><i class="btm_bg"></i>我的</a>
+    </footer>
+  </div>
+  <script src="js/jquery-1.10.1.min.js" charset="utf-8"></script>
+  <script src="js/common.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('#shop_save').click(function() {
+      formPage.shopSave($(this))
+    })
+  </script>
+</body>
+
+</html>

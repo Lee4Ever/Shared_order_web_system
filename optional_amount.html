@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta content="telephone=no" name="format-detection" />
-  <title>自定义金额买单</title>
+  <title>可选金额买单</title>
   <link rel="stylesheet" href="css/resetMobile.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/form.css">
@@ -13,30 +13,27 @@
   <div id="app">
     <header id="app_head_c">
       <i class="head_back"></i>
-      <h2 class="head_title">自定义金额买单</h2>
+      <h2 class="head_title">可选金额买单</h2>
       <i class="head_me"></i>
     </header>
     <section id="form_pages" class="customize_amount">
-      <div class="input_value_box">
-        <input id="page_input" placeholder="请输入打赏金额" readonly="readonly">
-        <div class="s_keyboard clearFix">
-          <button value="1" class="num_btn">1</button>
-          <button value="2" class="num_btn">2</button>
-          <button value="3" class="num_btn">3</button>
-          <button value="4" class="num_btn">4</button>
-          <button value="5" class="num_btn">5</button>
-          <button value="6" class="num_btn">6</button>
-          <button value="7" class="num_btn">7</button>
-          <button value="8" class="num_btn">8</button>
-          <button value="9" class="num_btn">9</button>
-          <button value="." class="num_btn">.</button>
-          <button value="0" class="num_btn">0</button>
-          <button value="back" class="num_btn"></button>
-        </div>
+      <div class="select_amount">
+        <h2 class="optional_title">请选择买单金额</h2>
+        <ul class="scratchable_latex clearFix">
+          <li>100</li>
+          <li>200</li>
+          <li>300</li>
+          <li>400</li>
+          <li class="a_selected">1000</li>
+          <li>500</li>
+          <li>600</li>
+          <li>700</li>
+          <li>800</li>
+        </ul>
       </div>
       <div class="use_coupon">
         <h4>使 用 现 金 券</h4>
-        <div class="cur_coupon">
+        <div class="cur_coupon black_coupon">
           <span class="coupon_name">满1000减300元</span>
           <i class="icon-remove"></i>
         </div>
@@ -73,10 +70,6 @@
       });
     })
 
-    $('.num_btn').click(function() {
-      formPage.sKeyboard($(this).val())
-    })
-
     $('.coupon_name').on('click', function() {
       pay.chooseCoupon();
     })
@@ -95,6 +88,13 @@
 
     $('.p_m_list li').click(function() {
       pay.payMethod($(this))
+    })
+
+    $('.scratchable_latex li').click(function() {
+      let v = $(this).text();
+      util.singleSwitch($(this), 'a_selected', function() {
+        $('#pay_btn b').text(v);
+      })
     })
   </script>
 </body>

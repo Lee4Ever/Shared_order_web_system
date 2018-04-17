@@ -1,4 +1,4 @@
-#app_menu_btm{
+#app_menu_btm {
   width: 15rem;
   height: 1.96rem;
   position: fixed;
@@ -9,53 +9,107 @@
   border-top: 1px #9C9C9C solid;
   background: #FCFCFC;
 }
-#app_menu_btm .nav_a{
+
+#app_menu_btm .nav_a {
   display: block;
   width: 3.6rem;
   height: 1.8rem;
   font-size: .4rem;
-  color:#9C9C9C;
-  line-height:0.57rem;
+  color: #9C9C9C;
+  line-height: 0.57rem;
   text-align: center;
   padding-top: .2rem;
 }
-#app_menu_btm .nav_a .btm_bg{
+
+#app_menu_btm .nav_a .btm_bg {
   display: block;
   height: .78rem;
   margin: 0 auto .2rem;
 }
+
 /* #app_menu_btm .active{
   color: #41c416
 } */
-#app_menu_btm .nav_a:nth-child(1) .btm_bg{
+
+#app_menu_btm .nav_a:nth-child(1) .btm_bg {
   width: .9rem;
   background: url(../img/icons.jpg) -0.6rem -0.6rem no-repeat;
   background-size: 20.4rem;
 }
-#app_menu_btm .active:nth-child(1) .btm_bg{
+
+#app_menu_btm .active:nth-child(1) .btm_bg {
   width: .92rem;
   background: url(../img/icons.jpg) -1.9rem -0.6rem no-repeat;
   background-size: 20.4rem;
 }
-#app_menu_btm .nav_a:nth-child(2) .btm_bg{
+
+#app_menu_btm .nav_a:nth-child(2) .btm_bg {
   width: .88rem;
   background: url(../img/icons.jpg) -3.22rem -0.6rem no-repeat;
   background-size: 20.4rem;
 }
-#app_menu_btm .active:nth-child(2) .btm_bg{
+
+#app_menu_btm .active:nth-child(2) .btm_bg {
   width: .86rem;
   background: url(../img/icons.jpg) -4.5rem -0.6rem no-repeat;
   background-size: 20.4rem;
 }
-#app_menu_btm .nav_a:nth-child(3) .btm_bg{
+
+#app_menu_btm .nav_a:nth-child(3) .btm_bg {
   width: .74rem;
   background: url(../img/icons.jpg) -5.76rem -0.6rem no-repeat;
   background-size: 20.4rem;
 }
-#app_menu_btm .active:nth-child(3) .btm_bg{
+
+#app_menu_btm .active:nth-child(3) .btm_bg {
   background: url(../img/icons.jpg) -6.9rem -0.6rem no-repeat;
   background-size: 20.4rem;
 }
-#app_menu_btm .nav_a:nth-child(2){
+
+#app_menu_btm .nav_a:nth-child(2) {
   margin: 0 1.7rem;
+}
+
+/*chat style*/
+
+#chat_btm {
+  position: fixed;
+  width: 15rem;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+#chat_btm #chat_input {
+  display: block;
+  flex: 1;
+  -webkit-flex: 1;
+  font-size: 0.53rem;
+  line-height: 0.57rem;
+  border: 1px #E5E5E5 solid;
+  padding: .42rem;
+  height: 1.4rem;
+}
+
+#chat_btm button {
+  display: block;
+  background: #F7F7F7;
+  text-align: center;
+  border: 1px #E5E5E5 solid;
+  border-left: none;
+  font-size: 0.53rem;
+  color: #9A9A9A;
+  line-height: 0.57rem;
+  height: 1.4rem;
+}
+
+#chat_btm #chat_send_btn {
+  padding: 0 .3rem 0 .96rem;
+  letter-spacing: .3rem;
+}
+
+#chat_btm #quick_note_reply {
+  width: 1.62rem;
+  background: url(../img/icon-quicknote.png) center no-repeat #F7F7F7;
+  background-size: .76rem;
 }
